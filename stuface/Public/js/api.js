@@ -1,19 +1,15 @@
 //显示登陆框
 function show(){
+	var speed = 500;
 	$(".show-submit-box").click(function(){
-		var speed= 1000;
-
 		$(".submit-boxing").css('display', "block");
-		$(".submit-box").css('display',"block");
-		$(".submit-box").animate({top:"60%"},speed);
+		$(".submit-box").css('top',"50%")
 		}
 	)
 	$(".submit-boxing").click(function(){
-		$(".submit-box").css('display',"none");
-		$(".submit-box").css('top',"0");
-		$(".submit-boxing").css('display', "none");
-		}
-	)
+		$(this).css('display',"none");
+		$(".submit-box").css('top',"-283px");
+	})
 }
 show();
 
@@ -21,61 +17,55 @@ show();
 function showUploading(){
 	$("#uploading").click(function(){
 		$(".submit-boxing").css('display', "block");
-		$(".uploading-box").css('display',"block");
+		$(".uploading-box").fadeIn(300);
 		}
 	)
 	$(".submit-boxing").click(function(){
-		$(".uploading-box").css('display',"none");
+		$(".uploading-box").fadeOut(300);
 		$(".submit-boxing").css('display', "none");
 		}
 	)
 }
 showUploading();
-
 //添加图片
-function addIn(){
-	$(".add-in").click(function(){
-		$(".add-in-file").trigger("click");
-	})
-}
-addIn();
+
 
 //查看详情
 function showDetail(){
 	//点击查看详情显示
-	$(".detail").click(function(){
-		$(".submit-boxing").css('display', "block");
-		$(".detail-box").css('display',"block");
-		$(".detail-box").animate({top:"50%",right: "50%"},1000);
+	$(".one-row").click(function(event){
+		var target = event.target,
+			parent;
+		if($(target).attr("class") == "love-nolove"){
+			return;
+		}
+		if($(target).parents(".speciel").context.className != "one-row"){
+			parent = $(target).parents(".speciel");
+			if($(target).parents(".speciel").context.getAttribute("big-pic")){
+				parent = $($(target).parents(".speciel").context);
+			}
+			$(".submit-boxing").css('display', "block");
+			$(".detail-box").css({top:"50%",right: "50%"})[0]
+				.children[1]
+				.children[0].
+				src = "Public/allimage/" + parent.attr("big-pic");
+			$(".detail-box")[0]
+				.children[2]
+				.innerHTML = "笑脸编号：" + parent.attr("uid");
+			$(".detail-box")[0]
+				.children[3]
+				.children[1]
+				.innerHTML = parent.attr("vote");
+			$(".detail-box")[0]
+		}
 	})
-	
-	//点击图片显示
-	$(".person-img").click(function(){
-		$(".submit-boxing").css('display', "block");
-		$(".detail-box").css('display',"block");
-		$(".detail-box").animate({top:"50%",right: "50%"},1000);
-	})
-
-	//隐藏
 	$(".submit-boxing").click(function(){
-		$(".detail-box").css('display',"none");
-		$(".detail-box").animate({top:"0",right: "0"});
+		$(".detail-box").css({top:"-529px",right: "-610px"});
 		$(".submit-boxing").css('display', "none");
 	})
 	
 }
 showDetail();
-
-//提交照片成功
-function turnSuccess(){
-	$(".hand-in").click(function(){
-		$(".uploading-box").css('display',"none");
-		$(".uploading-success-box").css('display',"block");
-		
-	})
-	
-}
-turnSuccess();
 
 //隐藏上传窗口
 function hideAddIn(){
@@ -94,16 +84,31 @@ function toTop(){
 	//查看是否已滚动
     function checkToTop(){
         if(window.scrollY > 50) {
-            $(".toTop").css('display',"block");
+            $(".toTop").fadeIn(300);
         }else {
-            $(".toTop").css('display',"none");
+            $(".toTop").fadeOut(300);
         }
     }
     setInterval(checkToTop,300);
 
     //回到顶部
     $('.toTop').click(function(){
-        $('html,body').animate({scrollTop: '0px'}, 800);
+        $('html,body').animate({scrollTop: '0px'}, 500);
     })
 }
 toTop();
+
+function showSection () {
+	var select_outer = $(".select-inf");
+	select_outer.mouseover(function () {
+		$(this).children(0).next().css('top',"42px")
+			.next().css('top',"84px")
+			.next().css('top',"126px");
+	})
+	select_outer.mouseout(function () {
+		$(this).children(0).next().css('top',"0px")
+			.next().css('top',"0px")
+			.next().css('top',"0px");
+	})
+}
+showSection();

@@ -2,6 +2,7 @@
 namespace Home\Model;
 use Think\Model;
 	class UserModel extends Model{
+		//protected $u = M('User');
 		public function dologin(){
 			$M = M('User');
 			$data['uid']= I('post.username');
@@ -9,16 +10,15 @@ use Think\Model;
 			$res = $M->where($data)->find();
 			$i=M('Image')->find();
 			if($res){
-				var_dump($res);
 				session('uid',$res['uid']);
 				session('has_upload',$res['has_upload']);
 				session('vote_day',$res['vote_day']);
 				session('user_sex',$res['sex']);
 				cookie('has_upload',$res['has_upload']);
 				cookie('vote_day',$res['vote_day']);
-				return "登录成功!";
+				return true;
 			}else{
-				return "账号或密码错误!";
+				return false;
 			}
 		/*	session('user',I('post.username'));
 			//$order = 'id';
@@ -30,13 +30,77 @@ use Think\Model;
 		*/
 		}
 
+		public function dologout(){
+			session('uid',null);
+			session('has_upload',null);
+			session('vote_day',null);
+			session('user_sex',null);
+			cookie('has_upload',null);
+			cookie('vote_day',null);
+		}
+
 		public function dovote(){
-			
-			$vote_day = I('session.vote_day');
+			//$vote_day = I('session.vote_day');
+			$today = date('d',time());
     		$where['uid'] = I('session.uid');
-    		$filename = I('post.filename');
-    		$save['vote_day'] = date('d',time());
+    		$save['vote_day'] = $today;
     		$U = M('User')->where($where)->save($save);
+			session('vote_day',$today);
+		}
+
+		public function test(){
+			$this->u = M('User');
+			$res = $this->u->find();
+			var_dump($res);
+		}
+
+		public function adduser($data){
+			$M = M('User');
+			$where['uid'] = $data['userInfo']['stu_num'];
+			$flag = $M->where($where)->find();
+			if(!$flag){
+				$save['uid'] = $data['userInfo']['stu_num'];
+				$save['stu_name'] = $data['userInfo']['real_name'];
+				if($data['userInfo']['gender'] == '男')
+					$save['sex'] = 0;
+				if($data['userInfo']['gender'] == '女')
+					$save['sex'] = 1;
+				$M->add($save);
+			}	
+		}
+/*		public function pariselover(){
+			$picture_id = I('post.id');
+			$where = [
+				'id' => $picture_id,
+			]
+			$vote = M('Image')->field('vote')->where($where)->select();
+			$save = [
+				'vote' => $vote++,
+			];
+			if(M('Image')->where($where)->save($save)){
+				$save = [
+					'vote_day' => date('d', time()),
+				];
+				$where['uid'] = I('session.uid');
+				M('user')->where($where)->save($save);
+				return true;
+			}else{
+				return false;
+			}
+		}
+*/
+		public function user_select(){
+			
+				$student_num = I('get.search');
+				$where = [
+					'uid' => $student_num,
+				];
+				$url = M('image')->where($where)->select();
+				if($url)
+					return $url;
+				else 
+					return '该生还没有上场照片哦!';
 			
 		}
-	} 		
+
+} 		

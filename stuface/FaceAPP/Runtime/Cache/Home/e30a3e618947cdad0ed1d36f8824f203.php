@@ -23,6 +23,7 @@
 		<!-- 内容 -->
 		<div class="content">
 			<!-- 上传按钮 -->
+			<img src="/stuface/Public/img/rocket.png" alt="">
 			<div id="uploading">
 				<img src="/stuface/Public/img/stone.png" alt="">
 			</div>
@@ -53,149 +54,43 @@
 				<div>
 					<div class="select-condition">
 						<div class="condition-left">
-							<select name="" id="">
-								<option value="综合">综合</option>
-								<option value="最新">最新</option>
-								<option value="最热">最热</option>
-							</select>
-							<select name="" id="" class="second-way">
-								<option value="全部">全部</option>
-								<option value="只看汉子">只看汉子</option>
-								<option value="只看妹子">只看妹子</option>
-							</select>
+							<div class="select-inf select-left" id="inf01">
+								<div class="option frist" id="con01">综合</div>
+								<div class="option">综合</div>
+								<div class="option">人气</div>
+								<div class="option">最新</div>
+							</div>
+							<div class="select-inf" id="inf02">
+								<div class="option frist" id="con02">全部</div>
+								<div class="option">全部</div>
+								<div class="option">汉子</div>
+								<div class="option">妹子</div>
+							</div>
 						</div>
 						<div class="condition-right">
-							<input type="text" placeholder="输入笑脸编号">
-							<img src="/stuface/Public/img/搜索按钮.png" alt="" class="search">
+							<input type="text" class="search" placeholder="输入笑脸编号">
+							<img src="/stuface/Public/img/搜索按钮.png" alt="" class="search-btn">
 						</div>
 					</div>
 					<div class="smile-face-photo">
 						<div class="one-row">
-							<div class="no-margin">
-								<span class="ranking">top1</span>
-								<div class="person-img">
-									<img src="/stuface/Public/img/person.png" alt="">
-								</div>
-								<img src="/stuface/Public/img/love.png" alt="" class="love-nolove">
-								<span class="love-people">27</span>
-								<img class="detail" src="/stuface/Public/img/详情.png" alt="">
-							</div>
-							<div>
-								<span class="ranking">top1</span>
-								<div class="person-img">
-									<img src="/stuface/Public/img/person.png" alt="">
-								</div>
-								<img src="/stuface/Public/img/love.png" alt="" class="love-nolove">
-								<span class="love-people">27</span>
-								<img class="detail" src="/stuface/Public/img/详情.png" alt="">
-							</div>
-							<div>
-								<span class="ranking">top1</span>
-								<div class="person-img">
-									<img src="/stuface/Public/img/person.png" alt="">
-								</div>
-								<img src="/stuface/Public/img/love.png" alt="" class="love-nolove">
-								<span class="love-people">27</span>
-								<img class="detail" src="/stuface/Public/img/详情.png" alt="">
-							</div>
-							<div>
-								<span class="ranking">top1</span>
-								<div class="person-img">
-									<img src="/stuface/Public/img/person.png" alt="">
-								</div>
-								<img src="/stuface/Public/img/love.png" alt="" class="love-nolove">
-								<span class="love-people">27</span>
-								<img class="detail" src="/stuface/Public/img/详情.png" alt="">
-							</div>
+							
 						</div>
-						<div class="one-row">
-							<div class="no-margin">
-								<span class="ranking">top1</span>
-								<div class="person-img">
-									<img src="/stuface/Public/img/person.png" alt="">
-								</div>
-								<img src="/stuface/Public/img/love.png" alt="" class="love-nolove">
-								<span class="love-people">27</span>
-								<img class="detail" src="/stuface/Public/img/详情.png" alt="">
-							</div>
-							<div>
-								<span class="ranking">top1</span>
-								<div class="person-img">
-									<img src="/stuface/Public/img/person.png" alt="">
-								</div>
-								<img src="/stuface/Public/img/love.png" alt="" class="love-nolove">
-								<span class="love-people">27</span>
-								<img class="detail" src="/stuface/Public/img/详情.png" alt="">
-							</div>
-							<div>
-								<span class="ranking">top1</span>
-								<div class="person-img">
-									<img src="/stuface/Public/img/person.png" alt="">
-								</div>
-								<img src="/stuface/Public/img/love.png" alt="" class="love-nolove">
-								<span class="love-people">27</span>
-								<img class="detail" src="/stuface/Public/img/详情.png" alt="">
-							</div>
-							<div>
-								<span class="ranking">top1</span>
-								<div class="person-img">
-									<img src="/stuface/Public/img/person.png" alt="">
-								</div>
-								<img src="/stuface/Public/img/love.png" alt="" class="love-nolove">
-								<span class="love-people">27</span>
-								<img class="detail" src="/stuface/Public/img/详情.png" alt="">
-							</div>
-						</div>
-						<div class="one-row">
-							<div class="no-margin">
-								<span class="ranking">top1</span>
-								<div class="person-img">
-									<img src="/stuface/Public/img/person.png" alt="">
-								</div>
-								<img src="/stuface/Public/img/love.png" alt="" class="love-nolove">
-								<span class="love-people">27</span>
-								<img class="detail" src="/stuface/Public/img/详情.png" alt="">
-							</div>
-							<div>
-								<span class="ranking">top1</span>
-								<div class="person-img">
-									<img src="/stuface/Public/img/person.png" alt="">
-								</div>
-								<img src="/stuface/Public/img/love.png" alt="" class="love-nolove">
-								<span class="love-people">27</span>
-								<img class="detail" src="/stuface/Public/img/详情.png" alt="">
-							</div>
-							<div>
-								<span class="ranking">top1</span>
-								<div class="person-img">
-									<img src="/stuface/Public/img/person.png" alt="">
-								</div>
-								<img src="/stuface/Public/img/love.png" alt="" class="love-nolove">
-								<span class="love-people">27</span>
-								<img class="detail" src="/stuface/Public/img/详情.png" alt="">
-							</div>
-							<div>
-								<span class="ranking">top1</span>
-								<div class="person-img">
-									<img src="/stuface/Public/img/person.png" alt="">
-								</div>
-								<img src="/stuface/Public/img/love.png" alt="" class="love-nolove">
-								<span class="love-people">27</span>
-								<img class="detail" src="/stuface/Public/img/详情.png" alt="">
-							</div>
-						</div>
+						
 						
 					</div>
 					<!-- 翻页 -->
-					<ul class="page">
-						<li><</li>
-						<li class="cur-li">1</li>
-						<li>2</li>
-						<li>3</li>
-						<li>4</li>
-						<li>5</li>
-						<li>></li>
-					</ul>
+					<div class="page-outer">
+						<ul class="page">
+							<li><</li>
+							<li class="cur-li">1</li>
+							<li>2</li>
+							<li>3</li>
+							<li>4</li>
+							<li>5</li>
+							<li>></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 			<!-- 回到顶部 -->
@@ -223,7 +118,7 @@
 				<input type="text" class="name" placeholder="请输入学号">
 				<img src="/stuface/Public/img/name.png" alt="" class="usrname">
 				<img src="/stuface/Public/img/dividing.png" alt="" class="name-dividing">
-				<input type="text" class="password" placeholder="身份证后六位">
+				<input type="password" class="password" placeholder="身份证后六位">
 				<img src="/stuface/Public/img/password.png" alt="" class="usrpwd">
 				<img src="/stuface/Public/img/dividing.png" alt="" class="pwd-dividing"><br>
 			</form>
@@ -234,11 +129,16 @@
 		<div class="submit-boxing"></div>
 		<div class="uploading-box">
 			<div class="uploading-pic-box">
-				<input type="file" class="add-in-file">
-				<img src="/stuface/Public/img/add-in.png" alt="" class="add-in">
+			<form class="p_form" method="post" action="<?php echo U('Index/upload');?>" enctype="multipart/form-data">
+				<input type="file" class="add-in-file" name="photo">
+			</form>
+				<img class="upload-img add-in" src="/stuface/Public/img/add-in.png" alt="">
+				<div class="reupload">
+					重选
+				</div>
 			</div>
 			<span>手机号：</span>
-			<input type="text">
+			<input class="phone_number" type="text">
 			<span class="important">*</span>
 			<p>我们不会透露你的联系方式</p>
 			<a class="hand-in">发布</a>
@@ -263,11 +163,391 @@
 				<img src="/stuface/Public/img/love.png" alt="">
 				<span class="love-people">27</span>
 			</div>
-			
-			
+		</div>
+		<div class="waiting-outer"></div>
+		<div class="waiting-o">
+			<img class="waiting" src="/stuface/Public/img/wait.gif">	
+		</div>
+		<div class="fail">
+			<img src="/stuface/Public/img/type-err.png">
+			<input class="close-err" type="button">
+		</div>
+		<div class="fail-err">
+			<img src="/stuface/Public/img/fail.png">
+			<input class="close-err" type="button">
+		</div>
+		<div class="uploading-wait">
+			<img class="uploading-w" src="/stuface/Public/img/uploading-w.png">
+			<input class="close-err close-uploading" type="button">
+			<div class="spinner">
+				<div class="spinner-container container1">
+					<div class="circle1"></div>
+					<div class="circle2"></div>
+					<div class="circle3"></div>
+					<div class="circle4"></div>
+				</div>
+				<div class="spinner-container container2">
+					<div class="circle1"></div>
+					<div class="circle2"></div>
+					<div class="circle3"></div>
+					<div class="circle4"></div>
+				</div>
+				<div class="spinner-container container3">
+					<div class="circle1"></div>
+					<div class="circle2"></div>
+					<div class="circle3"></div>
+					<div class="circle4"></div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<script src="/stuface/Public/js/jQuery.js"></script>
 	<script src="/stuface/Public/js/api.js"></script>
+	<script>
+		var check_login = false;
+		function page (container,footer,normal_data) {
+			$.get("<?php echo U('Index/get_page');?>", "fetchpage=1", function (data) {
+				var page_length = data,
+					focus = $(footer[1]),
+					focusNum = 1,
+					i,
+					j,
+					res;
+				function display (button_val) {
+
+					var button_val = parseInt(button_val) || 1;
+					get(button_val);
+					if(button_val == 1 || button_val == page_length){
+						if(button_val == 1){
+							$(footer[0]).css('display',"none");
+							$(footer[6]).css('display',"block");
+						}else{
+							$(footer[6]).css('display',"none");
+							$(footer[0]).css('display',"block");
+						}
+						if(button_val ==1 && button_val == page_length){
+							$(footer[0]).css('display',"none");
+							$(footer[6]).css('display',"none");
+						}
+					}else{
+						$(footer[0]).css('display',"block");
+						$(footer[6]).css('display',"block");
+					}
+					focusNum = button_val;
+					if(button_val <= 3 || button_val >= page_length - 2){
+						if(button_val <= 3){
+							for(i = 1;i < 6;i++,j++){
+								if(i <= page_length){
+									$(footer[i]).css('display',"block")
+										.html(i);
+									if(i == button_val){
+										focus.removeClass("cur-li");
+										$(footer[i]).addClass("cur-li");
+										focus = $(footer[i]);
+									}
+								}else{
+									$(footer[i]).css('display',"none");
+								}
+							}
+						}else{
+							for(i = page_length - 4,j = 1;i <= page_length;i++,j++){
+								if(i > 0){
+									$(footer[j]).css('display',"block")
+										.html(i);
+									if(i == button_val){
+										focus.removeClass("cur-li");
+										$(footer[j]).addClass("cur-li");
+										focus = $(footer[j]);
+									}
+								}else{
+									$(footer[j]).css('display',"none");
+								}
+							}
+						}
+					}else{
+						for(i = button_val - 2,j = 1;i <= button_val + 2;i++,j++){
+							$(footer[j]).css('display',"block")
+								.html(i);
+							if(i == button_val){
+								focus.removeClass("cur-li");
+								$(footer[j]).addClass("cur-li");
+								focus = $(footer[j]);
+							}
+						}
+					}
+					if(normal_data){
+						for(i = 0;i < 7;i++){
+							$(footer[i]).css('display',"none");
+						}
+					}
+					if(page_length == 1){
+						$(footer[1]).css('display',"none");
+					}
+				}
+				function addlisten(){
+					$(".page").css('margin-left',(1018 - parseFloat($(".page").width()))/2);
+					footer.click(function () {
+						if($(this).text() == "<"){
+							display(focusNum - 1);
+						}else if($(this).text() == ">"){
+							display(focusNum + 1);
+						}else{
+							display($(this).text());
+						}
+						$(".page").css('margin-left',(1018 - parseFloat($(".page").width()))/2);
+						
+					})
+				}
+				function get(button_val){
+					$.post("<?php echo U('Index/get_pic');?>","btn=" + button_val,function (data) {
+						data = normal_data || data;
+						showData(data);
+					});
+					
+				}
+				function showData(data){
+					container.html("");
+					var obj = {
+						"class_name":"",
+						"id":"1",
+						"pic":"55e6af2907944.jpg",
+						"big_pic":"55e6af2907944_big.jpg",
+						"uid":"2014211",
+						"vote":"0000000001",
+						"time":"2015-09-01 20:02:48",
+						"sex":null,
+						"phone":null
+					},
+						i,
+						key;
+					for(i = 0;i < data.length;i++){
+						for(key in data[i]){
+							obj[key] = data[i][key];
+						}
+						obj.vote = parseInt(obj.vote);
+						if(i%4 == 0){
+							obj.class_name = "no-margin";
+						}else{
+							obj.class_name = "";
+						}
+						oDiv = '<div top=' + obj.id + ' vote=' + obj.vote　+ ' uid=' + obj.uid + ' big-pic=' + obj.big_pic +' class="speciel ' + obj.class_name +'"><span class="ranking">'+"top" + obj.id +'</span><div class="person-img"><img src="/stuface/Public/allimage/'+ obj.pic +'" alt=""></div><img src="/stuface/Public/img/love.png" alt="" class="love-nolove"><span class="love-people">'+ obj.vote +'</span><img class="detail" src="/stuface/Public/img/详情.png" alt=""></div>';
+						container.append(oDiv);
+					}
+				}
+				display();
+				addlisten();
+			})
+		}
+		function changeSort () {		
+			$("#inf01").children().click(function (e) {
+				$("#con01").html($(this).html());
+				$.get("<?php echo U('Index/get_pic');?>","limit=" + $(this).text(),function (data) {
+					page($(".one-row"),$(".page li"));
+					$(".page li").removeClass("cur-li");
+				});
+			})
+			$("#inf02").children().click(function (e) {
+				$("#con02").html($(this).html());
+				$.get("<?php echo U('Index/get_pic');?>","sex=" + $(this).text(),function (data) {
+					page($(".one-row"),$(".page li"));
+					$(".page li").removeClass("cur-li");
+				});
+			})
+		}
+		changeSort();
+		page($(".one-row"),$(".page li"));
+		//...............................登录模块.........................................
+		function login(){
+			var name,
+				pass,
+				name_input = $(".name"),
+				pass_input = $(".password"),
+				waiting = $(".waiting-o"),
+				submit_boxing = $(".submit-boxing"),
+				sm_box = $(".waiting-outer"),
+				show = $(".show-submit-box");
+			check();
+			$(".submit").click(function () {
+				name = name_input.val();
+				pass = pass_input.val();
+				waiting.css('display',"block");
+				sm_box.css('display',"block");
+				submit_boxing.css('display',"none");
+				$(".submit-box").css('top',"-283px");
+				setTimeout(function () {
+					$.post("<?php echo U('Index/login');?>","username=" + name + "&&password=" + pass,function (res) {
+						if(res){
+							waiting.html("登陆成功");
+							check();
+						}else{
+							waiting.html("账号密码错误");
+						}
+						sm_box.click(function () {
+							waiting.css('display',"none");
+							sm_box.css('display',"none");
+							waiting.html('<img class="waiting" src="/stuface/Public/img/wait.gif">');
+							sm_box.unbind("click");
+						})
+						
+						check();
+					})
+				},1000)
+			})
+			//...............................注销模块.........................................
+			function check(){
+				$.get("<?php echo U('Index/checklog');?>","",function (res) {
+					if(res){
+						check_login = true;
+						show.html("<a>注销</a>");
+						show.unbind();
+						show.click(function () {
+							$.get("<?php echo U('Index/log_out');?>","",function (res) {//注销功能 向后台发送一个GET请求 你取消掉他{}的SESSION
+								if(res){
+									window.location = window.location.href;
+
+								}
+							})
+						})
+					}else{
+						check_login = false;
+					}
+				})
+			}
+		}
+		login();
+		//...............................投票模块.........................................
+		function vote () {
+			var outer = $(".one-row"),
+				target,
+				uid,
+				num;
+			outer.click(function (e) {
+				target = $(e.target);
+				uid = target.parents(".speciel ").attr("uid");
+				if(target.attr("class") == "love-nolove"){
+					num = parseInt(target.next().html()) + 1;
+					if(check_login){
+						$.post("<?php echo U('Index/vote');?>","uid=" + uid,function (res) {
+							if(res){
+								target.next().html(num);
+							}else{
+								alert("你今天已经投过票了哦");
+							}
+						})
+					}else{
+						alert("你还没有登录");
+					}
+				}
+			})
+		}
+		vote();
+		//...............................上传模块.........................................
+		function addIn(){
+			var data_name = "",
+				src,
+				test = /\.png$|jpeg$|jpg$/,
+				data,
+				b_check = false,
+				xhr,
+				sm_box = $(".submit-boxing"),
+				add_img01 = $(".upload-img"),
+				box = $(".uploading-box"),
+				add_img02 = $(".reypload"),
+				reupload = $(".reupload"),
+				close_uploading = $(".close-uploading"),
+				success = $(".uploading-success-box"),
+				uploading_wait = $(".uploading-wait"),
+				type_err = $(".close-err"),
+				fail = $(".fail-err"),
+				phone = $(".phone_number");
+			$(".add-in").click(function(){
+				$(".add-in-file").trigger("click");
+			})
+			type_err.click(function () {
+				type_err.parent().css('display',"none");
+				box.css('display',"block");
+			})
+			$(".add-in-file").change(function (e) {
+				data_name = $(this).val();
+				if(!data_name.match(test)){
+					b_check = false;
+				}else{
+					src = getFullPath($(".add-in-file")[0]);
+					$(".uploading-pic-box").css('background-image',"url(" + src + ")");
+					b_check = true;
+					data = new FormData($(".p_form")[0]);
+				}
+				$(".hand-in").css('background',"#f17b68");
+				reupload.css('display',"block");
+				$(".add-in").css("display","none");
+			})
+			$(".hand-in").click(function (e) {
+				if(!b_check){
+					type_err.parent(".fail-err").css('display',"block");
+					sm_box.css('display',"block");
+					box.css('display',"none");
+					return;
+				}
+				if(!check_login){
+					alert("你还没有登陆！");
+					return;
+				}
+				sm_box.click(function () {
+					window.location = window.location;
+				})
+				close_uploading.click(function () {
+					window.location = window.location;
+				})
+				sm_box.css('display',"block");
+				uploading_wait.css('display',"block");
+				box.css('display',"none");
+				data.append("phone",phone.val());
+				setTimeout(function () {
+					xhr = new XMLHttpRequest();  
+					xhr.open( "POST", "<?php echo U('Index/uploadpic');?>" ,true);  
+					xhr.onload = function(res) {  
+						if (xhr.status == 200) { //上传图片功能 这里我向你发送文件后 你需要判断是否上传成功 返回true或者false
+							res = res.response;
+							uploading_wait.css('display',"none");
+							if(res=="true"){
+								
+								success.css('display',"block");
+							}else{
+								
+								fail.css('display',"block");
+							}
+						} 
+					};  
+					xhr.send(data);  
+				},2000);
+				
+			})
+			sm_box.click(function () {
+				type_err.parent().css('display',"none");
+			})
+			reupload.click(function() {
+				$(".add-in-file").trigger("click");
+			})
+			function getFullPath (obj) {
+				return window.URL.createObjectURL(obj.files[0]);
+			}
+		}
+		addIn();
+		function search () {
+			var search_input = $(".search"),
+				sub = $(".search-btn"),
+				value;
+			sub.click(function () {
+				value = search_input.val();
+				if(value.replace(/\s/g, "") == ""){
+					alert("查询内容不能为空");
+				}
+				$.get("<?php echo U('Index/get_pic');?>","search=" + value,function (res) {
+					page($(".one-row"),$(".page li"),res);
+				})
+			})
+		}
+		search();
+	</script>
 </body>
 </html>
