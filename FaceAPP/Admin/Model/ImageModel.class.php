@@ -10,19 +10,28 @@ class ImageModel extends Model{
 
 	public function addpic($data){
 		$M = M('Image');
+		$has_upload = array();
 		foreach ($data[0] as $d) {
-			$save['pic'] = $d['pic'];
-			$save['uid'] = $d['uid'];
-			$save['time'] = date('Y-m-d H:i:s',time());
-			$save['is_pass'] = 1;
-			$M->add($data);
+			$where['uid'] = $d['uid'];
+			$res = $M->where($where)->find();
+			if(!$res){
+				$save['pic'] = $d['pic'];
+				$save['uid'] = $d['uid'];
+				$save['time'] = date('Y-m-d H:i:s',time());
+				$save['is_pass'] = 1;
+				$M->add($data);
+			}
 		}
 		foreach ($data[1] as $d) {
-			$save['pic'] = $d['pic'];
-			$save['uid'] = $d['uid'];
-			$save['time'] = date('Y-m-d H:i:s',time());
-			$save['is_pass'] = 2;
-			$M->add($data);
+			$where['uid'] = $d['uid'];
+			$res = $M->where($where)->find();
+			if(!$res){
+				$save['pic'] = $d['pic'];
+				$save['uid'] = $d['uid'];
+				$save['time'] = date('Y-m-d H:i:s',time());
+				$save['is_pass'] = 2;
+				$M->add($data);
+			}
 		}
 	}
 
