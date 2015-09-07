@@ -109,19 +109,50 @@ function showSection () {
 	var select_outer = $(".select-inf");
 	select_outer.mouseover(function () {
 		$(this).children(0)
-			.css({ 'border-bottom-left-radius': "0px",
-  				   'border-bottom-right-radius': "0px"})
+			.css({ '-o-border-bottom-left-radius': "0px",
+					'-webkit-border-bottom-left-radius': "0px",
+					'-moz-border-bottom-left-radius': "0px",
+					'-webkit-border-bottom-left-radius': "0px",
+					'border-bottom-left-radius': "0px",
+					'-o-border-bottom-right-radius': "0px",
+					'-webkit-border-bottom-right-radius': "0px",
+					'-moz-border-bottom-right-radius': "0px",
+					'-webkit-border-bottom-right-radius': "0px"
+					})
 			.next().css({'top':"42px",'border-radius':"0px"})
 			.next().css({'top':"84px",'border-radius':"0px"})
-			.next().css({'top':"126px",'border-bottom-left-radius':"6px",'border-bottom-right-radius':"6px"});
+			.next().css({'top':"126px", '-o-border-bottom-left-radius': "6px",
+					'-webkit-border-bottom-left-radius': "6px",
+					'-moz-border-bottom-left-radius': "6px",
+					'-webkit-border-bottom-left-radius': "6px",
+					'border-bottom-left-radius': "6px",
+					'-o-border-bottom-right-radius': "6px",
+					'-webkit-border-bottom-right-radius': "6px",
+					'-moz-border-bottom-right-radius': "6px",
+					'-webkit-border-bottom-right-radius': "6px"});
 	})
 	select_outer.mouseout(function () {
 		$(this).children(0)
-			.css({ 'border-bottom-left-radius': "6px",
-  				   'border-bottom-right-radius': "6px"})
+			.css({  '-o-border-bottom-left-radius': "6px",
+					'-webkit-border-bottom-left-radius': "6px",
+					'-moz-border-bottom-left-radius': "6px",
+					'-webkit-border-bottom-left-radius': "6px",
+					'border-bottom-left-radius': "6px",
+					'-o-border-bottom-right-radius': "6px",
+					'-webkit-border-bottom-right-radius': "6px",
+					'-moz-border-bottom-right-radius': "6px",
+					'-webkit-border-bottom-right-radius': "6px"})
 			.next().css({'top':"0px",'border-radius':"6px"})
 			.next().css({'top':"0px",'border-radius':"6px"})
-			.next().css({'top':"0px",'border-bottom-left-radius':"6px",'border-bottom-right-radius':"6px"});
+			.next().css({'top':"0px", '-o-border-bottom-left-radius': "6px",
+					'-webkit-border-bottom-left-radius': "6px",
+					'-moz-border-bottom-left-radius': "6px",
+					'-webkit-border-bottom-left-radius': "6px",
+					'border-bottom-left-radius': "6px",
+					'-o-border-bottom-right-radius': "6px",
+					'-webkit-border-bottom-right-radius': "6px",
+					'-moz-border-bottom-right-radius': "6px",
+					'-webkit-border-bottom-right-radius': "6px"});
 	})
 }
 showSection();

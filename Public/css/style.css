@@ -92,6 +92,11 @@ body {
   cursor: pointer;
   position: relative;
 }
+.person{
+  position: absolute;
+  right: -100px;
+  bottom: -40px;
+}
 #uploading .stone {
   position: absolute;
   left: -61px;
@@ -105,6 +110,7 @@ body {
   height: 362px;
   width: 100%;
   margin-top: 13px;
+  position: relative;
 }
 .activity-content .cqupt-helper {
   width: 280px;
@@ -206,7 +212,15 @@ body {
   border-radius: 6px;
 }
 .last{
+  -o-border-bottom-left-radius: 6px;
+  -webkit-border-bottom-left-radius: 6px;
+  -moz-border-bottom-left-radius: 6px;
+  -webkit-border-bottom-left-radius: 6px;
   border-bottom-left-radius: 6px;
+  -o-border-bottom-right-radius: 6px;
+  -webkit-border-bottom-right-radius: 6px;
+  -moz-border-bottom-right-radius: 6px;
+  -webkit-border-bottom-right-radius: 6px;
   border-bottom-right-radius: 6px;
 }
 .select-condition .select-inf .option:hover {
