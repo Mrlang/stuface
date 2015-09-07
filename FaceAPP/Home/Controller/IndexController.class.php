@@ -46,7 +46,7 @@ class IndexController extends Controller {
         if(  session('has_upload')==0 && session('uid')!=null && $_FILES['photo']!=null){
 
 
-            $filename = dothumb(doupload());
+            $filename = dothumb(doupload($this));
                 
             D('Image')->addpic($filename);
             
