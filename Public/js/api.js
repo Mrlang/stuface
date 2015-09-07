@@ -43,6 +43,9 @@ function showDetail(){
 		if($(target).attr("class") == "love-nolove"){
 			return;
 		}
+		if($(target).attr("class") == "no-data"){
+			return;
+		}
 		if($(target).parents(".speciel").context.className != "one-row"){
 			parent = $(target).parents(".speciel");
 			if($(target).parents(".speciel").context.getAttribute("big-pic")){

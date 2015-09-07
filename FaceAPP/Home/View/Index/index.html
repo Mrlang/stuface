@@ -249,7 +249,6 @@
 					j,
 					res;
 				function display (button_val) {
-
 					var button_val = parseInt(button_val) || 1;
 					get(button_val);
 					if(button_val == 1 || button_val == page_length){
@@ -318,6 +317,9 @@
 					if(page_length == 1){
 						$(footer[1]).css('display',"none");
 					}
+					if(page_length == 0){
+						$(footer[6]).css('display',"none");
+					}
 				}
 				function addlisten(){
 					$(".page").css('margin-left',(1018 - parseFloat($(".page").width()))/2);
@@ -346,8 +348,11 @@
 				api = get;
 				get_focus = getFoucs;
 				function showData(data){
-					if(!data[0]){
+					if(!data[0]&&normal_data){
 						container.html("<p class='no-data'>没有这个笑脸哦</p>");
+						return;
+					}else if(!data[0]&&!normal_data){
+						container.html("<p class='no-data'>暂无笑脸</p>");
 						return;
 					}
 					container.html("");
@@ -421,14 +426,20 @@
 				$(".submit-box").css('top',"-283px");
 				setTimeout(function () {
 					$.post("<{:U('Home/Index/log')}>","username=" + name + "&&password=" + pass,function (res) {
-						if(res){
+						console.log(res);
+						if(res.status == 200){
 							waiting.html('<p class="logining">登陆成功</p><img class="w" src="__PUBLIC__/img/w.png">');
 							setTimeout(function () {
 								window.location = window.location.href;
 							},2000);
 							check();
-						}else{
+						}else if(res.status == 111){
 							waiting.html('<p class="logining">账号密码错误</p><img class="w" src="__PUBLIC__/img/w.png">');
+							setTimeout(function () {
+								window.location = window.location.href;
+							},2000);
+						}else{
+							waiting.html('<p class="logining">你不是小鲜肉</p><img class="w" src="__PUBLIC__/img/w.png">');
 							setTimeout(function () {
 								window.location = window.location.href;
 							},2000);

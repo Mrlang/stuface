@@ -31,10 +31,10 @@ class IndexController extends Controller {
     }
 
     public function login(){
-    	if(I('post.username')!=null){
-    		$res = D('User')->dologin();
+        if(I('post.username')!=null){
+            $res = D('User')->dologin();
             $this->ajaxReturn($res);
-    	}
+        }
     }
 
     public function logout(){
@@ -90,15 +90,15 @@ class IndexController extends Controller {
             $this->ajaxReturn(false);
         }
 
-    /*	if(($_FILES['photo']!=null) && (I('session.uid')!=null) && (I('session.has_upload')==0)){
-    		//if(I('session.username')!=null)
+    /*  if(($_FILES['photo']!=null) && (I('session.uid')!=null) && (I('session.has_upload')==0)){
+            //if(I('session.username')!=null)
                 $filename = dothumb(doupload());
-        		D('Image')->add($filename);
+                D('Image')->add($filename);
                 $where['uid'] = I('session.uid');
                 $save['phone'] = I('post.phone');
                 M('User')->where($where)->save($save);
-        	    $this->ajaxReturn('ccc');
-    	}else{
+                $this->ajaxReturn('ccc');
+        }else{
             $this->ajaxReturn("你已上传过照片！");
         }
     */    
@@ -108,19 +108,19 @@ class IndexController extends Controller {
     }
 
 /*    public function vote(){
-    	$today = date('d',time());
-    	if(session('vote_day') < $today){
-	    	D('User')->dovote();
-	    	D('Image')->dovote();
-	    	$res = true;
-	    }else{
-	    	$res = false;
-	    }
-    	
-    		
-    	$this->ajaxReturn($res);
-    	
-    	
+        $today = date('d',time());
+        if(session('vote_day') < $today){
+            D('User')->dovote();
+            D('Image')->dovote();
+            $res = true;
+        }else{
+            $res = false;
+        }
+        
+            
+        $this->ajaxReturn($res);
+        
+        
     }*/
 
     public function vote(){
@@ -155,7 +155,7 @@ class IndexController extends Controller {
         var_dump($_SESSION);
         var_dump($_COOKIE);
         //D('User')->test();
-    	//$this->display();
+        //$this->display();
         $res = M('user')->where('uid = 0002')->find();
         if(!$res){
             var_dump($res);
@@ -167,7 +167,7 @@ class IndexController extends Controller {
         $res = M('Vote')->where($where)->find();
         var_dump($res);
         
-    	
+        
     }
 
     public function add_lover(){
@@ -191,6 +191,11 @@ class IndexController extends Controller {
 
     public function log(){
         $data = log_result();
+        $str = session('uid');
+        $reg = "/^2015/";
+        if(!preg_match_all($reg, $str,$arr)){
+            $this->ajaxReturn(['status'=>100,'info'=>'你不是小鲜肉']);
+        }
         if($data['status'] == 200 ){
             D('User')->adduser($data);
             $where['uid'] = $data['userInfo']['stu_num'];
@@ -201,9 +206,9 @@ class IndexController extends Controller {
                 session('vote_day',$res['vote_day']);
                 session('user_sex',$res['sex']);
             }
-            $this->ajaxReturn(true);
+            $this->ajaxReturn(['status'=>200,'info'=>'成功']);
         }else{
-            $this->ajaxReturn(false);
+            $this->ajaxReturn(['status'=>111,'info'=>'密码错误']);
         }
         
 
@@ -246,8 +251,12 @@ class IndexController extends Controller {
     }*/
         
         public function aaa(){
-            $a=get_uid("1441625126_2014.png");
-            var_dump($a);
+            $data = log_result();
+            $str = '2015255';
+            $reg = "/^2015/";
+            if(!preg_match_all($reg, $str,$arr)){
+                $this->ajaxReturn(['status'=>111,'info'=>'你不是小鲜肉']);
+            }
         }
 
 
