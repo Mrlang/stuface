@@ -8,7 +8,7 @@ use Think\Model;
 			$data['pic'] = $filename;
 			$data['big_pic'] = $big_name;
 			$data['uid'] = I('session.uid');
-			$data['time'] = time('Y-m-d H:i:s',time());
+			$data['time'] = date('Y-m-d H:i:s',time());
 			if(I('session.user_sex') != null)
 				$data['sex'] = I('session.user_sex');
 			if(I('post.phone') != null){
@@ -18,12 +18,15 @@ use Think\Model;
 			}
 			$M->add($data);
 		}
+		
 		public function dovote(){
 			$where['uid'] = I('post.uid');
 			$a = M('Image')->where($where)->field('vote')->select();
 			$data['vote'] = $a[0]['vote'] + 1;
 			M('Image')->where($where)->save($data);
 		}
+
+
 		
 		public function showpic(){
 			if(I('get.limit') == '最新')
@@ -78,6 +81,20 @@ use Think\Model;
 			if(I('get.search')!=null)
 				return 1;
 			return $page;
+		}
+
+		function save_in_Image($uid,$pic,$info){
+			$M = M('Image');
+			$where['uid'] = $uid;
+			$res = $M->where($where)->find();
+			if(!$res){
+				$data['uid'] = $uid;
+				$data['pic'] = $pic;
+				$data['big_pic'] = $pic;
+				$data['time'] = date('Y-m-d H:i:s',time());
+				$data['sex'] = $info['sex'];
+				$M->add($data);
+			}
 		}
 
 

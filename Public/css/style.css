@@ -71,7 +71,7 @@ body {
   border-top: 1px solid white;
   margin: 0 auto;
 }
-.content img[src="/stuface/Public/img/rocket.png"] {
+.content .rocket {
   position: absolute;
   margin: 118px 0 0 -160px;
 }
@@ -85,7 +85,7 @@ body {
   cursor: pointer;
   position: relative;
 }
-#uploading img[src="/stuface/Public/img/stone.png"] {
+#uploading .stone {
   position: absolute;
   left: -61px;
   bottom: -7px;
@@ -97,7 +97,7 @@ body {
   background-color: #ffffff;
   height: 362px;
   width: 100%;
-  margin-top: 5px;
+  margin-top: 13px;
 }
 .activity-content .cqupt-helper {
   width: 280px;
@@ -181,6 +181,7 @@ body {
   color: #ffffff;
   line-height: 42px;
   font-size: 20px;
+  cursor: pointer;
 }
 .select-condition .select-inf .option {
   position: absolute;
@@ -200,6 +201,11 @@ body {
   -moz-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
+  border-radius: 6px;
+}
+.last{
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 .select-condition .select-inf .option:hover {
   background: #f5ba20;
@@ -214,6 +220,7 @@ body {
 }
 .select-condition .select-left {
   margin-left: 43px;
+  border-radius: 5px;
 }
 .condition-left {
   float: left;
@@ -243,18 +250,22 @@ body {
   float: right;
 }
 .condition-right input {
-  height: 42px;
+  border: none;
+  outline:none;
+  height: 38px;
   width: 189px;
-  margin-top: 36px;
+  margin-top: 40px;
   margin-right: 16px;
   padding-left: 13px;
+  color: #999;
   float: left;
-  border: 1px solid transparent;
+  border-radius: 5px;
   font-size: 20px;
   background-color: #e0e0e0;
 }
 .condition-right .search-btn {
-  margin-top: 37px;
+  height: 42px;
+  margin-top: 40px;
   margin-right: 40px;
   float: left;
   cursor: pointer;
@@ -267,7 +278,7 @@ body {
   margin: 0 auto;
 }
 .one-row > div {
-  width: 211px;
+  width: 210px;
   height: 245px;
   margin-top: 30px;
   margin-left: 29px;
@@ -281,14 +292,14 @@ body {
   height: 24px;
   line-height: 24px;
   text-align: center;
-  top: 14px;
-  left: -2px;
+  top: 15px;
+  left: -3px;
   position: absolute;
-  background-image: url("../img/ranking.png");
+  background: url("../img/ranking.png") no-repeat;
 }
 .one-row > div .love-nolove {
-  margin-top: 15px;
-  margin-left: 8px;
+  margin-top: 13px;
+  margin-left: 13px;
   margin-bottom: -3px;
   vertical-align: top;
   float: left;
@@ -296,13 +307,13 @@ body {
 }
 .one-row > div .love-people {
   color: #ef644f;
-  margin-top: 14px;
-  margin-left: 2px;
+  margin-top: 11px;
+  margin-left: 5px;
   float: left;
 }
 .one-row > div .detail {
   margin-top: 7px;
-  margin-right: 10px;
+  margin-right: 12px;
   float: right;
   cursor: pointer;
 }
@@ -315,7 +326,7 @@ body {
   clear: both;
 }
 .person-img {
-  width: 190px;
+  width: 184px;
   height: 190px;
   padding: 12px;
   padding-bottom: 0;
@@ -324,6 +335,7 @@ body {
 .person-img img {
   width: 100%;
   height: 100%;
+  border: 1px solid #fff;
 }
 .page-outer {
   width: 100%;
@@ -340,7 +352,7 @@ body {
   height: 30px;
   margin-left: 13px;
   line-height: 30px;
-  border-radius: 6px;
+  border-radius: 5px;
   text-align: center;
   color: #ffffff;
   cursor: pointer;
@@ -366,6 +378,9 @@ body {
   bottom: 40px;
   position: fixed;
   cursor: pointer;
+}
+.toTop img {
+  border-radius: 5px;
 }
 .foot {
   height: 95px;
@@ -399,7 +414,7 @@ body {
   text-align: center;
   top: -283px;
   left: 50%;
-  border-radius: 6px;
+  border-radius: 5px;
   margin-left: -226px;
   margin-top: -141.5px;
   z-index: 111112;
@@ -417,43 +432,49 @@ body {
   transform: translate3d(0, 0, 0);
 }
 .submit-box .name {
-  width: 231px;
+  border: none;
+  outline: none;
+  color: #999;
+  width: 213px;
   height: 42px;
   margin-top: 63px;
-  padding-left: 48px;
-  border-radius: 6px;
+  padding-left: 66px;
+  border-radius: 5px;
   background-color: #ffffff;
-  position: relative;
   font-size: 14px;
   line-height: 42px;
+  position: relative;
 }
 .submit-box .usrname {
   left: 98px;
-  top: 77px;
+  top: 74px;
   position: absolute;
 }
 .submit-box .name-dividing {
   left: 130px;
-  top: 78px;
+  top: 75px;
   position: absolute;
 }
 .submit-box .password {
-  width: 231px;
+  border: none;
+  outline: none;
+  color: #999;
+  width: 213px;
   height: 42px;
   margin-top: 15px;
-  padding-left: 48px;
-  border-radius: 6px;
+  padding-left: 66px;
+  border-radius: 5px;
   font-size: 14px;
   line-height: 42px;
 }
 .submit-box .usrpwd {
   left: 98px;
-  top: 140px;
+  top: 134px;
   position: absolute;
 }
 .submit-box .pwd-dividing {
   left: 130px;
-  top: 142px;
+  top: 134px;
   position: absolute;
 }
 .submit-box .submit {
@@ -482,7 +503,7 @@ body {
   position: fixed;
   display: none;
   z-index: 111112;
-  border-radius: 6px;
+  border-radius: 5px;
 }
 .uploading-box .uploading-pic-box {
   width: 306px;
@@ -521,9 +542,11 @@ body {
   line-height: 30px;
 }
 .uploading-box input {
+  border: none;
+  outline: none;
   width: 196px;
   height: 26px;
-  border: 1px solid transparent;
+  color: #999;
   background-color: #ebebeb;
   float: left;
 }
@@ -539,7 +562,7 @@ body {
   margin-top: 5px;
   margin-left: 11px;
 }
-.uploading-box > a {
+.uploading-box .hand-in {
   color: #f8f8f8;
   font-size: 22px;
   width: 130px;
@@ -552,7 +575,7 @@ body {
   display: block;
   background-image: url("../img/pre-publish.png");
   background-repeat: no-repeat;
-  border-radius: 6px;
+  border-radius: 5px;
 }
 .uploading-success-box {
   width: 332px;
@@ -567,6 +590,7 @@ body {
   display: none;
   z-index: 1111112;
 }
+
 .uploading-success-box .success-icon {
   margin-top: 34px;
 }
@@ -585,12 +609,12 @@ body {
   cursor: pointer;
 }
 .detail-box {
-  width: 529px;
+  width: 530px;
   height: 610px;
   position: fixed;
   z-index: 111112;
-  right: -529px;
-  margin-right: -264.5px;
+  right: -530px;
+  margin-right: -265px;
   top: -610px;
   margin-top: -305px;
   background-color: #ffffff;
@@ -611,14 +635,15 @@ body {
   height: 24px;
   line-height: 24px;
   text-align: center;
-  top: 14px;
-  left: -2px;
+  top: 20px;
+  left: -3px;
   position: absolute;
   background-image: url("../img/ranking.png");
+  background-repeat: no-repeat;
 }
 .detail-box .person-img {
-  width: 497px;
-  height: 497px;
+  width: 496px;
+  height: 496px;
   margin: 4px;
 }
 .detail-box .smile-id {
@@ -626,16 +651,18 @@ body {
   font-size: 22px;
   float: left;
   margin-left: 16px;
-  margin-top: 42px;
+  margin-top: 31px;
 }
 .detail-box .love {
   float: right;
   margin-right: 16px;
-  margin-top: 40px;
+  margin-top: 31px;
 }
 .detail-box .love img {
   width: 27px;
   height: 27px;
+  margin-top: 3px;
+  margin-right: 8px;
   float: left;
 }
 .detail-box .love .love-people {
@@ -657,20 +684,23 @@ body {
   cursor: pointer;
 }
 .waiting-o{
-  width: 250px;
-  height: 250px;
-  background: #ffffff;
+  width: 392px;
+  height: 270px;
   position: fixed;
   top: 50%;
   left: 50%;
-  margin: -125px 0 0 -125px;
-  border-radius: 6px;
+  background: #ffffff;
+  margin: -135px 0 0 -196px;
+  border-radius: 5px;
   text-align: center;
-  line-height: 250px;
+  line-height: 120px;
   font-size: 34px;
   display: none;
   z-index: 1111112;
   color: #fa9e27;
+}
+.waiting-sp{
+  margin: 20px auto !important;
 }
 .waiting{
   position: fixed;
@@ -678,8 +708,46 @@ body {
   top: 50%;
   margin: -52px 0 0 -52.5px;
   background: #ffffff;
-  border-radius: 6px;
   display: block;
+}
+.logining{
+  margin-top: 20px;
+}
+.please-login{
+  width: 392px;
+  height: 270px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  color: #fa9e27;
+  background: #ffffff;
+  margin: -135px 0 0 -190px;
+  text-align: center;
+  line-height: 120px;
+  font-size: 34px;
+  z-index: 1111112;
+  display: none;
+}
+.no-data{
+  margin-top: 60px;
+  text-align: center;
+  font-size: 34px;
+  color: #fa9e27;
+}
+.vote-success{
+   width: 392px;
+  height: 270px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  color: #fa9e27;
+  background: #ffffff;
+  margin: -135px 0 0 -190px;
+  text-align: center;
+  line-height: 120px;
+  font-size: 34px;
+  z-index: 1111112;
+  display: none;
 }
 .uploading-wait{
   width: 392px;

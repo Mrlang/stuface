@@ -14,8 +14,8 @@ return array(
 
 	'URL_MODEL'				=>  '0',
 
-	'MODULE_ALLOW_LIST'   	=>   	array('Home','Admin'),
-	'DEFAULT_MODULE'     	=>   	'Home',
+	'MODULE_ALLOW_LIST'    =>    array('Home','Admin'),
+	'DEFAULT_MODULE'     	=>  'Home',
 	
 	'TMPL_L_DELIM'			=>	'<{',			//修改定界符
 	'TMPL_R_DELIM'			=>	'}>',

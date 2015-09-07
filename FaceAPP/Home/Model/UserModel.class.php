@@ -68,6 +68,30 @@ use Think\Model;
 				$M->add($save);
 			}	
 		}
+
+		public function save_in_User($uid,$info){
+		    $M = M('User');
+		    $where['uid'] = $uid;
+			$res = $M->where($where)->find();
+		   	if($res){
+		   		$where['has_upload'] = 0;
+		   		$res = $M->where($where)->find();
+		   		if($res){
+		   			$data['has_upload'] = 1;
+					$data['sex'] = $info['sex'];
+					$data['stu_name'] = $info['nickname'];
+					$M->where("uid=$uid")->save($data);
+		   		}
+		   	}else{
+		   		$data['has_upload'] = 1;
+				$data['sex'] = $info['sex'];
+				$data['stu_name'] = $info['nickname'];
+				$data['uid'] = $uid;
+				$M->add($data);
+		   	}
+			
+		    
+		}
 /*		public function pariselover(){
 			$picture_id = I('post.id');
 			$where = [

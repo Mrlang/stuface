@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>新生笑脸</title>
-	<link rel="stylesheet" href="/stuface/Public/css/style.css">
+	<link rel="stylesheet" href="/stu/Public/css/style.css">
 
 </head>
 <body>
@@ -11,7 +11,7 @@
 		<!-- 顶部 重邮Logo 登陆按钮 -->
 		<div class="top-container">
 			<div class="top">
-				<img src="/stuface/Public/img/school-logo.png" alt="">
+				<img src="/stu/Public/img/school-logo.png" alt="">
 				<ul class="nav">
 					<li><a href="http://hongyan.cqupt.edu.cn/">红岩网校</a></li>
 					<li><a href="http://hongyan.cqupt.edu.cn/welcome/2015/">2015新生专题网</a></li>
@@ -23,34 +23,34 @@
 		<!-- 内容 -->
 		<div class="content">
 			<!-- 上传按钮 -->
-			<img src="/stuface/Public/img/rocket.png" alt="">
+			<img class="rocket" src="/stu/Public/img/rocket.png" alt="">
 			<div id="uploading">
-				<img src="/stuface/Public/img/stone.png" alt="">
+				<img class="stone" src="/stu/Public/img/stone.png" alt="">
 			</div>
 			<!-- 活动详情 -->
 			<div class="activity-detail">
-				<img src="/stuface/Public/img/活动详情.png" alt="">
+				<img src="/stu/Public/img/活动详情.png" alt="">
 				<div class="activity-content">
 					<div class="cqupt-helper">
-						<img src="/stuface/Public/img/cqupt-helper.png" alt="">
+						<img src="/stu/Public/img/cqupt-helper.png" alt="">
 					</div>
 					
 					<div class="about-activity">
-						<p><span class="activity-time">活动时间：</span>本次线上参与活动时间为<span class="activity-detime">9月8日8：00——9月16日12：00</span></p>
+						<p><span class="activity-time">活动时间：</span>本次线上参与活动时间为<span class="activity-detime">9月9日8：00——9月11日0：00</span></p>
 						<p class="about-people"><span class="activity-people">活动对象：</span><span class="student-2015">2015级</span>所有小鲜肉</p>
 						<p class="activity-way">参与方式</p>
 						<p>方式一：上传自己的“笑脸”照片（每人限一张）参与活动。</p>
 						<p>方式二：9月9日至10日在雨红莲操场和风雨操场参与拍照活动。</p>
 						<p class="pic-content">照片内容：“笑脸”照片可以是新生自己和各大重邮建筑合照。</p>
-						<p class="career-talk">红岩网校工作站招新宣讲会</p>
-						<p class="career-show">9月19日晚上19：00 将会展示最美笑脸</p>
+						<p class="career-talk">红岩网校工作站招新宣讲会(新生招新交流群:223991619)</p>
+						<p class="career-show">我们将会在9月13日19：00点2100教室展示最美笑脸</p>
 					</div>
 				</div>
 				
 			</div>
 			<!-- 笑脸展示 -->
 			<div class="smile-face">
-				<img src="/stuface/Public/img/笑脸展示.png" alt="">
+				<img src="/stu/Public/img/笑脸展示.png" alt="">
 				<div>
 					<div class="select-condition">
 						<div class="condition-left">
@@ -58,18 +58,18 @@
 								<div class="option frist" id="con01">综合</div>
 								<div class="option">综合</div>
 								<div class="option">人气</div>
-								<div class="option">最新</div>
+								<div class="option last">最新</div>
 							</div>
 							<div class="select-inf" id="inf02">
 								<div class="option frist" id="con02">全部</div>
 								<div class="option">全部</div>
 								<div class="option">汉子</div>
-								<div class="option">妹子</div>
+								<div class="option last">妹子</div>
 							</div>
 						</div>
 						<div class="condition-right">
 							<input type="text" class="search" placeholder="输入笑脸编号">
-							<img src="/stuface/Public/img/搜索按钮.png" alt="" class="search-btn">
+							<img src="/stu/Public/img/搜索按钮.png" alt="" class="search-btn">
 						</div>
 					</div>
 					<div class="smile-face-photo">
@@ -95,7 +95,7 @@
 			</div>
 			<!-- 回到顶部 -->
 			<div class="toTop">
-				<img src="/stuface/Public/img/toTop.png" alt="">
+				<img src="/stu/Public/img/toTop.png" alt="">
 			</div>
 			<!-- 声明信息 -->
 			<div class="foot">
@@ -106,7 +106,6 @@
 				<a href="">指出错误</a>
 				<span>|</span>
 				<a href="">管理入口</a>
-				<span>|</span>
 				<p>本网站由红岩网校工作站负责开发，管理，不经红岩网校委员会书面同意，不得进行转载</p>
 				<p>地址：重庆市南岸区崇文路2号（重庆邮电大学内） 400065 E-mail :redrock@cqupt.edu.cn (023-62461084)</p>
 			</div>
@@ -116,11 +115,11 @@
 		<div class="submit-box">
 			<form action="">
 				<input type="text" class="name" placeholder="请输入学号">
-				<img src="/stuface/Public/img/name.png" alt="" class="usrname">
-				<img src="/stuface/Public/img/dividing.png" alt="" class="name-dividing">
+				<img src="/stu/Public/img/name.png" alt="" class="usrname">
+				<img src="/stu/Public/img/dividing.png" alt="" class="name-dividing">
 				<input type="password" class="password" placeholder="身份证后六位">
-				<img src="/stuface/Public/img/password.png" alt="" class="usrpwd">
-				<img src="/stuface/Public/img/dividing.png" alt="" class="pwd-dividing"><br>
+				<img src="/stu/Public/img/password.png" alt="" class="usrpwd">
+				<img src="/stu/Public/img/dividing.png" alt="" class="pwd-dividing"><br>
 			</form>
 			<a class="submit">登陆</a>
 			
@@ -129,10 +128,10 @@
 		<div class="submit-boxing"></div>
 		<div class="uploading-box">
 			<div class="uploading-pic-box">
-			<form class="p_form" method="post" action="<?php echo U('Index/upload');?>" enctype="multipart/form-data">
+			<form class="p_form" method="post" action="<?php echo U('Home/Index/upload');?>" enctype="multipart/form-data">
 				<input type="file" class="add-in-file" name="photo">
 			</form>
-				<img class="upload-img add-in" src="/stuface/Public/img/add-in.png" alt="">
+				<img class="upload-img add-in" src="/stu/Public/img/add-in.png" alt="">
 				<div class="reupload">
 					重选
 				</div>
@@ -141,43 +140,77 @@
 			<input class="phone_number" type="text">
 			<span class="important">*</span>
 			<p>我们不会透露你的联系方式</p>
-			<a class="hand-in">发布</a>
+			<img src="/stu/Public/img/publish.png" class="hand-in">
 		</div>
 		<!-- 照片上传成功窗口 -->
 		<div class="submit-boxing"></div>
 		<div class="uploading-success-box">
-			<img src="/stuface/Public/img/push-sucess.png" alt="" class="success-icon">
+			<img src="/stu/Public/img/push-sucess.png" alt="" class="success-icon">
 			<p>关注重邮小帮手（微信号：cyxbswx）并绑定学号，我们将审核结果推送给你</p>
-			<img src="/stuface/Public/img/cqupt-helper.png" alt="" class="cqupt-helper">
-			<img src="/stuface/Public/img/确认.png" alt="" class="confirm">
+			<img src="/stu/Public/img/cqupt-helper.png" alt="" class="cqupt-helper">
+			<img src="/stu/Public/img/确认.png" alt="" class="confirm">
 		</div>
 		<!-- 查看详情 -->
 		<div class="submit-boxing"></div>
 		<div class="detail-box">
 			<span class="ranking">top1</span>
 			<div class="person-img">
-				<img src="/stuface/Public/img/person.png" alt="">
+				<img src="/stu/Public/img/person.png" alt="">
 			</div>
 			<span class="smile-id">笑脸编号:28</span>
 			<div class="love">
-				<img src="/stuface/Public/img/love.png" alt="">
+				<img src="/stu/Public/img/love.png" alt="">
 				<span class="love-people">27</span>
 			</div>
 		</div>
+		<div class="please-login">
+			<p class="logining">
+				请先登陆
+			</p>
+			<img class="w" src="/stu/Public/img/w.png">
+		</div>
+		<div class="vote-success">
+			<p class="logining">
+				投票成功
+			</p>
+			<img class="w" src="/stu/Public/img/w.png">
+		</div>
 		<div class="waiting-outer"></div>
 		<div class="waiting-o">
-			<img class="waiting" src="/stuface/Public/img/wait.gif">	
+			<p class="logining">
+				正在登陆
+			</p>
+			<div class="spinner waiting-sp">
+				<div class="spinner-container container1">
+					<div class="circle1"></div>
+					<div class="circle2"></div>
+					<div class="circle3"></div>
+					<div class="circle4"></div>
+				</div>
+				<div class="spinner-container container2">
+					<div class="circle1"></div>
+					<div class="circle2"></div>
+					<div class="circle3"></div>
+					<div class="circle4"></div>
+				</div>
+				<div class="spinner-container container3">
+					<div class="circle1"></div>
+					<div class="circle2"></div>
+					<div class="circle3"></div>
+					<div class="circle4"></div>
+				</div>
+			</div>
 		</div>
 		<div class="fail">
-			<img src="/stuface/Public/img/type-err.png">
+			<img src="/stu/Public/img/type-err.png">
 			<input class="close-err" type="button">
 		</div>
 		<div class="fail-err">
-			<img src="/stuface/Public/img/fail.png">
+			<img src="/stu/Public/img/fail.png">
 			<input class="close-err" type="button">
 		</div>
 		<div class="uploading-wait">
-			<img class="uploading-w" src="/stuface/Public/img/uploading-w.png">
+			<img class="uploading-w" src="/stu/Public/img/uploading-w.png">
 			<input class="close-err close-uploading" type="button">
 			<div class="spinner">
 				<div class="spinner-container container1">
@@ -201,12 +234,18 @@
 			</div>
 		</div>
 	</div>
-	<script src="/stuface/Public/js/jQuery.js"></script>
-	<script src="/stuface/Public/js/api.js"></script>
+	<form method="post" action="<?php echo U('Index/uploadpic');?>" enctype="multipart/form-data">
+		<input name="photo" type="file">
+		<input type="submit">
+	</form>
+	<script src="/stu/Public/js/jQuery.js"></script>
+	<script src="/stu/Public/js/api.js"></script>
 	<script>
-		var check_login = false;
+		var check_login = false,
+			api,
+			get_focus;
 		function page (container,footer,normal_data) {
-			$.get("<?php echo U('Index/get_page');?>", "fetchpage=1", function (data) {
+			$.get("<?php echo U('Home/Index/get_page');?>", "fetchpage=1", function (data) {
 				var page_length = data,
 					focus = $(footer[1]),
 					focusNum = 1,
@@ -299,13 +338,22 @@
 					})
 				}
 				function get(button_val){
-					$.post("<?php echo U('Index/get_pic');?>","btn=" + button_val,function (data) {
+					$.post("<?php echo U('Home/Index/get_pic');?>","btn=" + button_val,function (data) {
 						data = normal_data || data;
 						showData(data);
 					});
 					
 				}
+				function getFoucs(){
+					return focus;
+				}
+				api = get;
+				get_focus = getFoucs;
 				function showData(data){
+					if(!data[0]){
+						container.html("<p class='no-data'>没有这个笑脸哦</p>");
+						return;
+					}
 					container.html("");
 					var obj = {
 						"class_name":"",
@@ -330,7 +378,7 @@
 						}else{
 							obj.class_name = "";
 						}
-						oDiv = '<div top=' + obj.id + ' vote=' + obj.vote　+ ' uid=' + obj.uid + ' big-pic=' + obj.big_pic +' class="speciel ' + obj.class_name +'"><span class="ranking">'+"top" + obj.id +'</span><div class="person-img"><img src="/stuface/Public/allimage/'+ obj.pic +'" alt=""></div><img src="/stuface/Public/img/love.png" alt="" class="love-nolove"><span class="love-people">'+ obj.vote +'</span><img class="detail" src="/stuface/Public/img/详情.png" alt=""></div>';
+						oDiv = '<div top=' + obj.id + ' vote=' + obj.vote　+ ' uid=' + obj.uid + ' big-pic=' + obj.big_pic +' class="speciel ' + obj.class_name +'"><span class="ranking">'+"top" + obj.id +'</span><div class="person-img"><img src="/stu/Public/allimage/'+ obj.pic +'" alt=""></div><img src="/stu/Public/img/love.png" alt="" class="love-nolove"><span class="love-people">'+ obj.vote +'</span><img class="detail" src="/stu/Public/img/详情.png" alt=""></div>';
 						container.append(oDiv);
 					}
 				}
@@ -341,14 +389,14 @@
 		function changeSort () {		
 			$("#inf01").children().click(function (e) {
 				$("#con01").html($(this).html());
-				$.get("<?php echo U('Index/get_pic');?>","limit=" + $(this).text(),function (data) {
+				$.get("<?php echo U('Home/Index/get_pic');?>","limit=" + $(this).text(),function (data) {
 					page($(".one-row"),$(".page li"));
 					$(".page li").removeClass("cur-li");
 				});
 			})
 			$("#inf02").children().click(function (e) {
 				$("#con02").html($(this).html());
-				$.get("<?php echo U('Index/get_pic');?>","sex=" + $(this).text(),function (data) {
+				$.get("<?php echo U('Home/Index/get_pic');?>","sex=" + $(this).text(),function (data) {
 					page($(".one-row"),$(".page li"));
 					$(".page li").removeClass("cur-li");
 				});
@@ -365,7 +413,8 @@
 				waiting = $(".waiting-o"),
 				submit_boxing = $(".submit-boxing"),
 				sm_box = $(".waiting-outer"),
-				show = $(".show-submit-box");
+				show = $(".show-submit-box"),
+				w = $(".w");
 			check();
 			$(".submit").click(function () {
 				name = name_input.val();
@@ -375,18 +424,21 @@
 				submit_boxing.css('display',"none");
 				$(".submit-box").css('top',"-283px");
 				setTimeout(function () {
-					$.post("<?php echo U('Index/login');?>","username=" + name + "&&password=" + pass,function (res) {
+					$.post("<?php echo U('Home/Index/login');?>","username=" + name + "&&password=" + pass,function (res) {
 						if(res){
-							waiting.html("登陆成功");
+							waiting.html('<p class="logining">登陆成功</p><img class="w" src="/stu/Public/img/w.png">');
+							setTimeout(function () {
+								window.location = window.location.href;
+							},2000);
 							check();
 						}else{
-							waiting.html("账号密码错误");
+							waiting.html('<p class="logining">账号密码错误</p><img class="w" src="/stu/Public/img/w.png">');
+							setTimeout(function () {
+								window.location = window.location.href;
+							},2000);
 						}
 						sm_box.click(function () {
-							waiting.css('display',"none");
-							sm_box.css('display',"none");
-							waiting.html('<img class="waiting" src="/stuface/Public/img/wait.gif">');
-							sm_box.unbind("click");
+							window.location = window.location.href;
 						})
 						
 						check();
@@ -395,13 +447,13 @@
 			})
 			//...............................注销模块.........................................
 			function check(){
-				$.get("<?php echo U('Index/checklog');?>","",function (res) {
+				$.get("<?php echo U('Home/Index/checklog');?>","",function (res) {
 					if(res){
 						check_login = true;
 						show.html("<a>注销</a>");
 						show.unbind();
 						show.click(function () {
-							$.get("<?php echo U('Index/log_out');?>","",function (res) {//注销功能 向后台发送一个GET请求 你取消掉他{}的SESSION
+							$.get("<?php echo U('Home/Index/log_out');?>","",function (res) {//注销功能 向后台发送一个GET请求 你取消掉他{}的SESSION
 								if(res){
 									window.location = window.location.href;
 
@@ -418,27 +470,69 @@
 		//...............................投票模块.........................................
 		function vote () {
 			var outer = $(".one-row"),
+				vote_success = $(".vote-success"),
+				sb_box = $(".submit-boxing"),
 				target,
 				uid,
-				num;
+				num,
+				focus,
+				timer;
 			outer.click(function (e) {
 				target = $(e.target);
 				uid = target.parents(".speciel ").attr("uid");
 				if(target.attr("class") == "love-nolove"){
-					num = parseInt(target.next().html()) + 1;
 					if(check_login){
-						$.post("<?php echo U('Index/vote');?>","uid=" + uid,function (res) {
-							if(res){
-								target.next().html(num);
-							}else{
-								alert("你今天已经投过票了哦");
+						$.post("<?php echo U('Home/Index/vote');?>","uid=" + uid,function (res) {
+							focus = get_focus();
+							api(focus.text());
+							var res;
+							sb_box.click(function () {
+								clearTimeout(timer);
+								vote_success.css('display',"none");
+							})
+							if(res){//投票成功
+								sb_box.css('display',"block");
+								vote_success.css('display',"block");
+								vote_success.children(".logining").html("投票成功")
+							}else{//失败
+								sb_box.css('display',"block");
+								vote_success.css('display',"block");
+								vote_success.children(".logining").html("你已经投过这个笑脸了")
 							}
+							timer = setTimeout(function () {
+								sb_box.css('display',"none");
+								vote_success.css('display',"none");
+							},2000);
 						})
 					}else{
-						alert("你还没有登录");
+						please_login();
 					}
 				}
 			})
+		}
+		//ajax轮询投票
+		function voteing () {
+			var focus;
+			setInterval(function () {
+				focus = get_focus();
+				api(focus.text());
+			},60000);
+		}
+		voteing();
+		function please_login() {
+			var	please_login = $(".please-login"),
+				sb_box = $(".submit-boxing");
+			please_login.css('display',"block");
+			sb_box.css('display',"block");
+			sb_box.click(function (){
+				clearTimeout(sb_box.timer);
+				please_login.css('display',"none");
+				sb_box.css('display',"none");
+			})
+			sb_box.timer = setTimeout(function () {
+				please_login.css('display',"none");
+				sb_box.css('display',"none");
+			},2000)
 		}
 		vote();
 		//...............................上传模块.........................................
@@ -477,7 +571,7 @@
 					b_check = true;
 					data = new FormData($(".p_form")[0]);
 				}
-				$(".hand-in").css('background',"#f17b68");
+				$(".hand-in").attr('src',"/stu/Public/img/readyPublish.png");
 				reupload.css('display',"block");
 				$(".add-in").css("display","none");
 			})
@@ -486,10 +580,6 @@
 					type_err.parent(".fail-err").css('display',"block");
 					sm_box.css('display',"block");
 					box.css('display',"none");
-					return;
-				}
-				if(!check_login){
-					alert("你还没有登陆！");
 					return;
 				}
 				sm_box.click(function () {
@@ -502,24 +592,21 @@
 				uploading_wait.css('display',"block");
 				box.css('display',"none");
 				data.append("phone",phone.val());
-				setTimeout(function () {
+				//setTimeout(function () {
 					xhr = new XMLHttpRequest();  
-					xhr.open( "POST", "<?php echo U('Index/uploadpic');?>" ,true);  
+					xhr.open( "POST", "<?php echo U('Home/Index/uploadpic');?>" ,true);  
 					xhr.onload = function(res) {  
 						if (xhr.status == 200) { //上传图片功能 这里我向你发送文件后 你需要判断是否上传成功 返回true或者false
-							res = res.response;
 							uploading_wait.css('display',"none");
-							if(res=="true"){
-								
+							if(res.currentTarget.response == "true"){
 								success.css('display',"block");
 							}else{
-								
 								fail.css('display',"block");
 							}
 						} 
 					};  
 					xhr.send(data);  
-				},2000);
+				//},2000);
 				
 			})
 			sm_box.click(function () {
@@ -536,13 +623,14 @@
 		function search () {
 			var search_input = $(".search"),
 				sub = $(".search-btn"),
+				container = $(".one-row"),
 				value;
 			sub.click(function () {
 				value = search_input.val();
 				if(value.replace(/\s/g, "") == ""){
-					alert("查询内容不能为空");
+					return;
 				}
-				$.get("<?php echo U('Index/get_pic');?>","search=" + value,function (res) {
+				$.get("<?php echo U('Home/Index/get_pic');?>","search=" + value,function (res) {
 					page($(".one-row"),$(".page li"),res);
 				})
 			})

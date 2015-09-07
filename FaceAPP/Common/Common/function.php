@@ -77,4 +77,63 @@
         $data = json_decode ($output,true);
         return $data;
     }
-  
+    
+    function curl_pic(){
+        $access_token = 'gh_68f0a1ffc303';
+        $media_id = $media_id;
+        $url = "http://file.api.weixin.qq.com/cgi-bin/media/get?access_token=$access_token&media_id=$media_id";
+        $local = './Public/allimage/'.date("Ymdhis").".jpg";
+        $cp = curl_init($url);
+        $fp = fopen($local,"w");
+        curl_setopt($cp, CURLOPT_FILE, $fp);
+        curl_exec($cp);
+        curl_close($cp);
+        fclose($fp);
+        $arr = explode('/', $local);
+        $filename = array_pop($arr);
+        return $filename;
+    }
+
+    function curl_uid(){
+        $url = 'http://hongyan.cqupt.edu.cn/MagicLoop/index.php?s=/addon/Api/Api/bindVerify';
+        $data['openid'] = I('post.openid');
+        $data['token'] = 'gh_68f0a1ffc303';
+        $data['timestamp'] = time();
+        $data['string'] = 'asdfghyjuikl';
+        $data['secret'] =  sha1(sha1($data['timestamp']).md5($data['string'])."redrock");
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_HEADER, 0);
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        $data = curl_exec($ch);
+        $d = json_decode($data,true);
+        $uid = $d['stuId'];
+        var_dump($uid);
+        //return $uid;
+    }
+
+    function curl_info(){
+        $url = 'http://hongyan.cqupt.edu.cn/MagicLoop/index.php?s=/addon/Api/Api/userInfo';
+        $data['openid'] = I('post.openid');
+        //$data['openid'] = 'asdfgthyjuiklosadfbeuya';
+        $data['token'] = 'gh_68f0a1ffc303';
+        $data['timestamp'] = time();
+        $data['string'] = 'asdfghyjuikl';
+        $data['secret'] =  sha1(sha1($data['timestamp']).md5($data['string'])."redrock");
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_HEADER, 0);
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        $data = curl_exec($ch);
+        $info = json_decode($data,true);
+        if($info['sex']==1)
+            $info['sex']='男';
+        else
+            $info['sex']='女';
+        //var_dump($info);
+        return $info;
+    }

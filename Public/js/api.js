@@ -16,6 +16,10 @@ show();
 //显示上传窗口
 function showUploading(){
 	$("#uploading").click(function(){
+		if(!check_login){
+			please_login();
+			return;
+		}
 		$(".submit-boxing").css('display', "block");
 		$(".uploading-box").fadeIn(300);
 		}
@@ -51,7 +55,7 @@ function showDetail(){
 				src = "Public/allimage/" + parent.attr("big-pic");
 			$(".detail-box")[0]
 				.children[2]
-				.innerHTML = "笑脸编号：" + parent.attr("uid");
+				.innerHTML = "笑脸编号：" + parent.attr("top");
 			$(".detail-box")[0]
 				.children[3]
 				.children[1]
@@ -101,14 +105,20 @@ toTop();
 function showSection () {
 	var select_outer = $(".select-inf");
 	select_outer.mouseover(function () {
-		$(this).children(0).next().css('top',"42px")
-			.next().css('top',"84px")
-			.next().css('top',"126px");
+		$(this).children(0)
+			.css({ 'border-bottom-left-radius': "0px",
+  				   'border-bottom-right-radius': "0px"})
+			.next().css({'top':"42px",'border-radius':"0px"})
+			.next().css({'top':"84px",'border-radius':"0px"})
+			.next().css({'top':"126px",'border-bottom-left-radius':"6px",'border-bottom-right-radius':"6px"});
 	})
 	select_outer.mouseout(function () {
-		$(this).children(0).next().css('top',"0px")
-			.next().css('top',"0px")
-			.next().css('top',"0px");
+		$(this).children(0)
+			.css({ 'border-bottom-left-radius': "6px",
+  				   'border-bottom-right-radius': "6px"})
+			.next().css({'top':"0px",'border-radius':"6px"})
+			.next().css({'top':"0px",'border-radius':"6px"})
+			.next().css({'top':"0px",'border-bottom-left-radius':"6px",'border-bottom-right-radius':"6px"});
 	})
 }
 showSection();

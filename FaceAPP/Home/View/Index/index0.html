@@ -166,7 +166,7 @@
 	<script src="__PUBLIC__/js/api.js"></script>
 	<script>
 		function page (container,footer) {
-			$.get("<{:U('Index/get_page')}>", "fetchpage=1", function (data) {
+			$.get("<{:U('Home/Index/get_page')}>", "fetchpage=1", function (data) {
 				var page_length = data,
 					focus = $(footer[1]),
 					focusNum = 1,
