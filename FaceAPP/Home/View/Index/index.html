@@ -420,7 +420,7 @@
 				submit_boxing.css('display',"none");
 				$(".submit-box").css('top',"-283px");
 				setTimeout(function () {
-					$.post("<{:U('Home/Index/login')}>","username=" + name + "&&password=" + pass,function (res) {
+					$.post("<{:U('Home/Index/log')}>","username=" + name + "&&password=" + pass,function (res) {
 						if(res){
 							waiting.html('<p class="logining">登陆成功</p><img class="w" src="__PUBLIC__/img/w.png">');
 							setTimeout(function () {
