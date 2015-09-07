@@ -32,7 +32,7 @@
 				<img src="/stu/Public/img/活动详情.png" alt="">
 				<div class="activity-content">
 					<div class="cqupt-helper">
-						<img src="/stu/Public/img/cqupt-helper.png" alt="">
+						<img class="cqupt" src="/stu/Public/img/cqupt-helper.jpg" alt="">
 					</div>
 					
 					<div class="about-activity">
@@ -147,7 +147,7 @@
 		<div class="uploading-success-box">
 			<img src="/stu/Public/img/push-sucess.png" alt="" class="success-icon">
 			<p>关注重邮小帮手（微信号：cyxbswx）并绑定学号，我们将审核结果推送给你</p>
-			<img src="/stu/Public/img/cqupt-helper.png" alt="" class="cqupt-helper">
+			<img src="/stu/Public/img/cqupt-helper.jpg" alt="" class="cqupt-helper">
 			<img src="/stu/Public/img/确认.png" alt="" class="confirm">
 		</div>
 		<!-- 查看详情 -->
@@ -234,10 +234,6 @@
 			</div>
 		</div>
 	</div>
-	<form method="post" action="<?php echo U('Index/uploadpic');?>" enctype="multipart/form-data">
-		<input name="photo" type="file">
-		<input type="submit">
-	</form>
 	<script src="/stu/Public/js/jQuery.js"></script>
 	<script src="/stu/Public/js/api.js"></script>
 	<script>

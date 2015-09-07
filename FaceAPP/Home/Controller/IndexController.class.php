@@ -43,9 +43,9 @@ class IndexController extends Controller {
     }
 
     public function uploadpic() {
-        
-        if(I('session.has_upload')==0 && I('session.uid')!=null && $_FILES['photo']!=null){
-        
+        if(  session('has_upload')==0 && session('uid')!=null && $_FILES['photo']!=null){
+
+
             $filename = dothumb(doupload());
                 
             D('Image')->addpic($filename);
@@ -216,6 +216,10 @@ class IndexController extends Controller {
         return $filename;
     }*/
         
+        public function aaa(){
+            $a=get_uid("1441625126_2014.png");
+            var_dump($a);
+        }
 
 
 

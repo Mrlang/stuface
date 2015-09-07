@@ -1,29 +1,34 @@
 <?php
 	function doupload(){
-		$upload = new \Think\Upload();						// 实例化上传类
-    	$upload->maxSize = 3145728;							// 设置附件上传大小
-    	$upload->exts = array('jpg', 'gif', 'png', 'jpeg'); // 设置附件上传类型
-    	$upload->rootPath = './Public/upimage/'; 			// 设置附件上传根目录
-    	$upload->autoSub = false;
-        $upload->savePath = ''; 		
-        if(I('session.uid')!=null){					        //学生上传单张照片
-    	    $upload->saveName = I('session.uid');              // 设置上传文件名
-            $info = $upload->uploadOne($_FILES['photo']);		//执行上传方法
-    	    if(!$info) {                                       // 上传错误提示错误信息
+		$upload = new \Think\Upload();                      // 实例化上传类
+        $upload->maxSize = 3145728;                         // 设置附件上传大小
+        $upload->exts = array('jpg', 'gif', 'png', 'jpeg'); // 设置附件上传类型
+        $upload->rootPath = './Public/upimage/';            // 设置附件上传根目录
+        $upload->autoSub = false;
+        $upload->savePath = ''; 
+        if(session('uid')){                      //学生上传单张照片
+            $upload->saveName = time().'_'.session('uid');              // 设置上传文件名
+            
+            $info = $upload->uploadOne($_FILES['photo']);       //执行上传方法
+            
+            if(!$info) {                                       // 上传错误提示错误信息
                 $this->error($upload->getError());
             }else{                                              // 上传成功 获取上传文件信息
                 return './Public/upimage/'.$info['savename'];
-            }
+                }
         }else{                                                  //后台管理员批量上传照片
             $info = $upload->upload($_FILES['photo']);      
-            if(!$info) {                                       // 上传错误提示错误信息
+                if(!$info) {                                       // 上传错误提示错误信息
                 $this->error($upload->getError());
             }else{                                              // 上传成功 获取上传文件信息
                 return $info;
             } 
         }
+
         
     }
+
+        
 
     function dothumb($picpath){
     	$arr = explode('/', $picpath);
@@ -56,8 +61,10 @@
     }
 
     function get_uid($filename){
-        $arr = explode('.', $filename);
-        $uid = $arr[0];
+        $arr = explode('_', $filename);
+        $a = $arr[1];
+        $array = explode('.',$a);
+        $uid = $array[0];
         return $uid;
     }
 
@@ -80,12 +87,13 @@
     
     function curl_pic(){
         $access_token = 'gh_68f0a1ffc303';
-        $media_id = $media_id;
+        $media_id = I('post.media_id');
         $url = "http://file.api.weixin.qq.com/cgi-bin/media/get?access_token=$access_token&media_id=$media_id";
         $local = './Public/allimage/'.date("Ymdhis").".jpg";
         $cp = curl_init($url);
         $fp = fopen($local,"w");
         curl_setopt($cp, CURLOPT_FILE, $fp);
+        curl_setopt($cp, CURLOPT_HEADER, 0);
         curl_exec($cp);
         curl_close($cp);
         fclose($fp);
@@ -96,6 +104,7 @@
 
     function curl_uid(){
         $url = 'http://hongyan.cqupt.edu.cn/MagicLoop/index.php?s=/addon/Api/Api/bindVerify';
+        //$data['openid'] = I('post.openid');
         $data['openid'] = I('post.openid');
         $data['token'] = 'gh_68f0a1ffc303';
         $data['timestamp'] = time();
@@ -136,4 +145,9 @@
             $info['sex']='女';
         //var_dump($info);
         return $info;
+    }
+
+    function myFun($uid) {
+        
+        return $uid;
     }

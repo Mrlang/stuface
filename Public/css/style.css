@@ -26,6 +26,12 @@ body {
   background-position: center 0;
   position: relative;
 }
+.cqupt{
+  width: 300px;
+  height: 300px;
+  margin: 26px 0 0 0px;
+  float: left;
+}
 #uploading {
   background-image: url("../img/上传按钮.png");
 }
@@ -103,11 +109,6 @@ body {
   width: 280px;
   height: 100%;
   float: left;
-}
-.activity-content .cqupt-helper img {
-  margin-top: 41px;
-  margin-left: 0;
-  float: right;
 }
 .activity-content .about-activity {
   margin-top: 27px;
