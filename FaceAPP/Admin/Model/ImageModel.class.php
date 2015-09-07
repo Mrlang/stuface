@@ -2,6 +2,12 @@
 namespace Admin\Model;
 use Think\Model;
 class ImageModel extends Model{
+	public function getNopass(){
+		$M = M('Image');
+		$nopassers = $M->where('is_pass=0')->select();
+		return $nopassers;
+	}
+
 	public function getpic(){
 		$M = M('Image');
 		$data = $M->select();
@@ -39,7 +45,7 @@ class ImageModel extends Model{
 		$M = M('Image');
 		$data['all'] = $M->count('id');
 		$data['wait'] = $M->where('is_pass=0')->count('id');
-		$data['fail'] = $M->where('is_pass=2')->count('id');
+		$data['fail'] = $M->where('is_pass=1')->count('id');
 		return $data;
 	}
 

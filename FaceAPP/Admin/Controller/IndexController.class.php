@@ -3,26 +3,23 @@ namespace Admin\Controller;
 use Think\Controller;
 class IndexController extends Controller {
     public function index(){
-    $this->display();
+        $this->display();
     }
 
+    public function login(){
+        $manager = I('manager');
+        $password = I('password');
+        $where = [
+            "manager" => $manager,
+            "password" => $password, 
+        ];
+        if(M('manager')->where($where)->select()){
+            session('manager', $manager);
+            $this->ajaxReturn("true");
+        }
+    }
     public function logout(){
-        /*var_dump(I('session.name'));
-        session_unset();
-        session_destroy();
-        var_dump(I('session.name'));
-        echo "session销毁成功";*/
-        $this->success('退出成功！',U('Home/Index/index'),3);
+        session('manager', null);
+        echo"<script>window.location.href='".U('Index/index')."'</script>";
     }
-
-    public function uploadpic(){
-        $this->display();
-    }
-    
-    public function check(){
-        $this->display();
-    }
-    
-    
-
 }

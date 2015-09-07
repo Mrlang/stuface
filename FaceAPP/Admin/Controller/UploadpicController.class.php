@@ -2,65 +2,70 @@
 namespace Admin\Controller;
 use Think\Controller;
 class UploadpicController extends Controller {
+    public function _before_index(){
+        if(!session('manager')){
+            echo"<script>
+            alert('请先登录');
+            window.location.href='".U('Index/index')."'</script>";
+        }
+    }
     public function index(){
         $this->display();
     }
 
-    public function logout(){
-        /*var_dump(I('session.name'));
-        session_unset();
-        session_destroy();
-        var_dump(I('session.name'));
-        echo "session销毁成功";*/
-        $this->success('退出成功！',U('Home/Index/index'),3);
-    }
 
-    public function uploadpic(){
-        $this->display();
-    }
-    
-    public function check(){
-        $this->display();
-    }
-    
-    public function search_uid(){
-        if(I('post.uid')!=null){
-            $where['uid'] = I('post.uid');
-            $res = M('User')->where($where)->select();
-            if($res)
-                $this->ajaxReturn($res);
-            else
-                $this->ajaxReturn(false);
-        }
-    }
+    public function upload(){
+        $stunum = I('post.stunum');
+        $name = I('post.name');
+        $sex = I('post.sex');
+        $file = substr(strrchr($_FILES['picture']['name'], '.'), 1);
+        if($stunum && $name && $sex && $file){
+            if($file == 'jpg' || $file == 'jpeg' || $file == 'png' || $file == 'gif'){
+                $filename = $name.".".$file;
+                $path1 = "Public/upimage/".$filename;
+                move_uploaded_file($_FILES['picture']['tmp_name'] , $path1);
+                $bigname = $name."_big.".$file;
+                // $path2 = "Public/upimage/".$bigname;
 
-    public function search_name(){
-        if(I('post.name')!=null){
-            $where['stu_name'] = I('post.name');
-            $res = M('User')->where($where)->select();
-            if($res)
-                $this->ajaxReturn($res);
-            else
-                $this->ajaxReturn(false); 
-        }
-    }
-
-    public function postpic(){
-        $info = doupload();
-        for($i=0;$i<count($info);$i++){
-            savepic($info[$i]['savename']);
-            $where['uid'] = get_uid($filename);
-            $res = M('User')->where($where)->field('uid,sex,stu_name')->find();
-            if($res){
-                $info[$i]['stu_data'] = $res;
-            }
-        }
-        $this->ajaxReturn($info);
+                $imginfo = getImageSize($path1);
+                $imgw = $imginfo [0];     
+                $imgh = $imginfo [1];
+                $image = new \Think\Image();
+                $image->open($path1);
+                $image->save('./Public/allimage/'.$bigname);
+                $image->thumb(300, 300,\Think\Image::IMAGE_THUMB_SCALE)->save('./Public/allimage/'.$filename);
+                // unlink($path1);
         
-    }
-
-    public function submitpic(){
-        $data = I('post.submitdata');
-        M('Image')->addpic($data);
+                $data = [
+                    'pic' => $filename,
+                    'big_pic' => $bigname,
+                    'uid' => $stunum,
+                    'vote' => 0,
+                    'sex' => $sex,
+                    'time' => date('Y-m-d H:i:s',time()),
+                    'is_pass' => 0,
+                ];
+                M('image')->add($data);
+                $data = [
+                    'stu_name' => $name,
+                    'password' => '',
+                    'vote_day' => '',
+                    'uid' => $stunum,
+                    'sex' => $sex,
+                    'has_upload' => 1,
+                ];
+                M('user')->add($data);
+            }else{
+                echo"<script>
+                alert('格式不对');
+                window.location.href='".U('Uploadpic/index')."'</script>";
+            }
+        }else{
+            echo"<script>
+                alert('信息不完整');
+                window.location.href='".U('Uploadpic/index')."'</script>";
+        }
     }
 }
+    
+    

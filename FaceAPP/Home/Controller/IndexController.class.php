@@ -33,7 +33,10 @@ class IndexController extends Controller {
     public function login(){
         if(I('post.username')!=null){
             $res = D('User')->dologin();
-            $this->ajaxReturn($res);
+            if($res)
+                $this->ajaxReturn(['status'=>200,'info'=>'成功']);
+            else
+                $this->ajaxReturn(['status'=>111,'info'=>'密码错误']);
         }
     }
 
@@ -191,11 +194,6 @@ class IndexController extends Controller {
 
     public function log(){
         $data = log_result();
-        $str = session('uid');
-        $reg = "/^2015/";
-        if(!preg_match_all($reg, $str,$arr)){
-            $this->ajaxReturn(['status'=>100,'info'=>'你不是小鲜肉']);
-        }
         if($data['status'] == 200 ){
             D('User')->adduser($data);
             $where['uid'] = $data['userInfo']['stu_num'];

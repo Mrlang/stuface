@@ -416,7 +416,8 @@
 				submit_boxing = $(".submit-boxing"),
 				sm_box = $(".waiting-outer"),
 				show = $(".show-submit-box"),
-				w = $(".w");
+				w = $(".w"),
+				exp = /^(2015)/;
 			check();
 			$(".submit").click(function () {
 				name = name_input.val();
@@ -425,6 +426,13 @@
 				sm_box.css('display',"block");
 				submit_boxing.css('display',"none");
 				$(".submit-box").css('top',"-283px");
+				if(!exp.test(name)){
+					waiting.html('<p class="logining">你不是小鲜肉</p><img class="w" src="__PUBLIC__/img/w.png">');
+					setTimeout(function () {
+						window.location = window.location.href;
+					},2000);
+					return;
+				}
 				setTimeout(function () {
 					$.post("<{:U('Home/Index/log')}>","username=" + name + "&&password=" + pass,function (res) {
 						console.log(res);
@@ -436,11 +444,6 @@
 							check();
 						}else if(res.status == 111){
 							waiting.html('<p class="logining">账号密码错误</p><img class="w" src="__PUBLIC__/img/w.png">');
-							setTimeout(function () {
-								window.location = window.location.href;
-							},2000);
-						}else{
-							waiting.html('<p class="logining">你不是小鲜肉</p><img class="w" src="__PUBLIC__/img/w.png">');
 							setTimeout(function () {
 								window.location = window.location.href;
 							},2000);
