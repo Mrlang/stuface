@@ -60,6 +60,7 @@ class UploadpicController extends Controller {
                     'has_upload' => 1,
                 ];
                 M('user')->add($data);
+                $this->success('请去审核页面审核', U('Check/index'));
             }else{
                 echo"<script>
                 alert('格式不对');
