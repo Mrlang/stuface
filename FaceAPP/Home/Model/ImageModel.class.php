@@ -13,7 +13,7 @@ use Think\Model;
 				$data['sex'] = I('session.user_sex');
 			if(I('post.phone') != null){
 				$save['phone'] = I('post.phone');
-				$where['uid'] = $uid;
+				$where['uid'] = session('uid');
 				M('User')->where($where)->save($save);
 			}
 			$M->add($data);

@@ -75,7 +75,20 @@ class IndexController extends Controller {
     }
 
     public function uploadpic() {
-        if(  session('has_upload')==0 && session('uid')!=null && $_FILES['photo']!=null){
+        if(I('post.uid') != null && I('post.form') != null){
+            session('uid', I('post.uid'));
+            if(I('post.sex'))
+                session('user_sex',I('post.sex'));
+            $limit['uid'] = I('post.uid');
+            $limit['has_upload'] = 1;
+            $res = M('User')->where($limit)->find();
+            if($res){
+                session("has_upload",1);
+            }else{
+                session("has_upload",0);
+            }
+        }
+        if(session('has_upload')==0 && session('uid')!=null && $_FILES['photo']!=null){
 
 
             $filename = dothumb($this->doupload());
