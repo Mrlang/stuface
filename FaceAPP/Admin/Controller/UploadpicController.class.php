@@ -18,6 +18,11 @@ class UploadpicController extends Controller {
         $stunum = I('post.stunum');
         $name = I('post.name');
         $sex = I('post.sex');
+        if($sex == '1'){
+            $sex = '女';
+        }else if($sex == '0'){
+            $sex = '男';
+        }
         $file = substr(strrchr($_FILES['picture']['name'], '.'), 1);
         if($stunum && $name && $sex && $file){
             if($file == 'jpg' || $file == 'jpeg' || $file == 'png' || $file == 'gif'){
