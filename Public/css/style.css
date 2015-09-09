@@ -308,6 +308,7 @@ body {
   height: 24px;
   line-height: 24px;
   text-align: center;
+  display: none;
   top: 15px;
   left: -3px;
   position: absolute;
