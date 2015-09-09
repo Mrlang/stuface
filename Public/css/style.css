@@ -311,6 +311,7 @@ body {
   top: 15px;
   left: -3px;
   position: absolute;
+  display: none;
   background: url("../img/ranking.png") no-repeat;
 }
 .one-row > div .love-nolove {
