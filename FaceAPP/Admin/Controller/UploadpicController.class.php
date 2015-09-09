@@ -26,10 +26,10 @@ class UploadpicController extends Controller {
         $file = substr(strrchr($_FILES['picture']['name'], '.'), 1);
         if($stunum && $name && $sex && $file){
             if($file == 'jpg' || $file == 'jpeg' || $file == 'png' || $file == 'gif'){
-                $filename = $name.".".$file;
+                $filename = $stunum.".".$file;
                 $path1 = "Public/upimage/".$filename;
                 move_uploaded_file($_FILES['picture']['tmp_name'] , $path1);
-                $bigname = $name."_big.".$file;
+                $bigname = $stunum."_big.".$file;
                 // $path2 = "Public/upimage/".$bigname;
 
                 $imginfo = getImageSize($path1);
