@@ -88,7 +88,7 @@ class IndexController extends Controller {
                 session("has_upload",0);
             }
         }
-        if(session('has_upload')==0 && session('uid')!=null && $_FILES['photo']!=null){
+        if(session('has_upload')==0 && session('uid')!=null){
 
 
             $filename = dothumb($this->doupload());
