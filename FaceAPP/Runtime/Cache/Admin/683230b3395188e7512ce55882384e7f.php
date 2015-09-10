@@ -3,7 +3,7 @@
 <head>
   <meta charest="utf-8">
   <title>后台管理系统</title>
-	<link href="/face/Public/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/stuface/Public/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
   <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
@@ -97,7 +97,7 @@
 <script>
 	function showpic(pic){
 		var show = document.getElementById('showpic');
-		url = "/face/Public/allimage/" + pic.name;
+		url = "/stuface/Public/allimage/" + pic.name;
 		show.style.backgroundImage = "url('"+url+"')"; 
 		var id = pic.title;
 		show.title = id;
@@ -144,8 +144,8 @@
 		}
 	} 
 </script>
-<script src="/face/Public/js/jquery-1.11.1.min.js"></script>
-<script src="/face/Public/js/bootstrap.min.js"></script>
+<script src="/stuface/Public/js/jquery-1.11.1.min.js"></script>
+<script src="/stuface/Public/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 	var login = document.getElementById('login');
 	login.onclick = function(){
