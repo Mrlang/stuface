@@ -1,0 +1,50 @@
+[ 2015-09-10T18:14:01+08:00 ] ::1 /stuface/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000957s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000660s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000721s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000176s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000232s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018218s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018284s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001451s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001490s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001011s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001055s ]
+
+[ 2015-09-10T18:14:02+08:00 ] ::1 /stuface/index.php?m=Home&c=Index&a=checklog
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000503s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000659s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000815s ]
+
+[ 2015-09-10T18:14:02+08:00 ] ::1 /stuface/index.php?m=Home&c=Index&a=get_page&fetchpage=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000547s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000720s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000848s ]
+SQL: SHOW COLUMNS FROM `tbl_image` [ RunTime:0.0301s ]
+SQL: SHOW COLUMNS FROM `tbl_image` [ RunTime:0.0058s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `tbl_image` WHERE `is_pass` = 1 LIMIT 1   [ RunTime:0.0173s ]
+
+[ 2015-09-10T18:14:02+08:00 ] ::1 /stuface/index.php?m=Home&c=Index&a=get_pic
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000293s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000377s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000425s ]
+SQL: SHOW COLUMNS FROM `tbl_image` [ RunTime:0.0055s ]
+SQL: SHOW COLUMNS FROM `tbl_image` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `tbl_image` WHERE `is_pass` = 1 LIMIT 0,12   [ RunTime:0.0004s ]
+
