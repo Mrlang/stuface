@@ -60,6 +60,7 @@ class UploadpicController extends Controller {
                     'has_upload' => 1,
                 ];
                 M('user')->add($data);
+                echo "<script> alert('成功'); window.location.href='".U('Uploadpic/index')."'</script>"
             }else{
                 echo"<script>
                 alert('格式不对');

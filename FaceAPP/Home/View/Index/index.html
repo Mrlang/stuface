@@ -238,6 +238,7 @@
 	<script src="__PUBLIC__/js/jQuery.js"></script>
 	<script src="__PUBLIC__/js/api.js"></script>
 	<script>
+	console.log("page_test");
 		var check_login = false,
 			api,
 			get_focus;
@@ -246,12 +247,16 @@
 				var page_length = data,
 					focus = $(footer[1]),
 					focusNum = 1,
+					timer = true,
 					i,
 					j,
 					res;
 				function display (button_val) {
-					var button_val = parseInt(button_val) || 1;
+					if(timer == false){
+						return;
+					}
 					get(button_val);
+					var button_val = parseInt(button_val) || 1;
 					if(button_val == 1 || button_val == page_length){
 						if(button_val == 1){
 							$(footer[0]).css('display',"none");
@@ -337,6 +342,7 @@
 					})
 				}
 				function get(button_val){
+					timer = false;
 					$.post("<{:U('Home/Index/get_pic')}>","btn=" + button_val,function (data) {
 						data = normal_data || data;
 						showData(data);
@@ -383,6 +389,7 @@
 						oDiv = '<div top=' + obj.id + ' vote=' + obj.vote　+ ' uid=' + obj.uid + ' big-pic=' + obj.big_pic +' class="speciel ' + obj.class_name +'"><span class="ranking">'+"top" + obj.id +'</span><div class="person-img"><img src="__PUBLIC__/allimage/'+ obj.pic +'" alt=""></div><img src="__PUBLIC__/img/love.png" alt="" class="love-nolove"><span class="love-people">'+ obj.vote +'</span><img class="detail" src="__PUBLIC__/img/详情.png" alt=""></div>';
 						container.append(oDiv);
 					}
+					timer = true;
 				}
 				display();
 				addlisten();

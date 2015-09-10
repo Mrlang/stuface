@@ -18,7 +18,7 @@
 	    			<input type="file" name="picture" id="pic">
 	  			</div>
 	        <div class="form-group col-md-1 col-md-offset-5">
-	          <input type="submit" class="btn btn-success">
+	          <input id="sub" type="submit" class="btn btn-success">
 	        </div>
 			</form>   
 	    <button class="btn btn-info" id="show">点击预览</button> 
@@ -29,8 +29,12 @@
 	show.onclick = function(){
 	  var p = document.getElementById('pic');
 	  var sp = document.getElementById('showpic');
-	  var url = window.URL.createObjectURL(p.files[0]);
+	  var url = window.URL.createObjectURL(p.files[0]),
+	  	sub = document.getElementById("sub");
 	  sp.style.backgroundImage = "url('"+url+"')";
+	  sub.onclick = function () {
+	  	sub.disabled = "disabled";
+	  }
 	}
 </script>
 <include file="Index/footer" />
