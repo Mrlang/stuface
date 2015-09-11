@@ -238,7 +238,7 @@
 	<script src="__PUBLIC__/js/jQuery.js"></script>
 	<script src="__PUBLIC__/js/api.js"></script>
 	<script>
-	console.log("page_test");
+	console.log("page_test1");
 		var check_login = false,
 			api,
 			get_focus;
@@ -255,8 +255,8 @@
 					if(timer == false){
 						return;
 					}
+					timer = false;
 					var button_val = parseInt(button_val) || 1;
-					get(button_val);
 					if(button_val == 1 || button_val == page_length){
 						if(button_val == 1){
 							$(footer[0]).css('display',"none");
@@ -326,6 +326,7 @@
 					if(page_length == 0){
 						$(footer[6]).css('display',"none");
 					}
+					get(button_val);
 				}
 				function addlisten(){
 					$(".page").css('margin-left',(1018 - parseFloat($(".page").width()))/2);
@@ -342,7 +343,6 @@
 					})
 				}
 				function get(button_val){
-					timer = false;
 					$.post("<{:U('Home/Index/get_pic')}>","btn=" + button_val,function (data) {
 						data = normal_data || data;
 						showData(data);
