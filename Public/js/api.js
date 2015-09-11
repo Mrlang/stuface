@@ -63,7 +63,7 @@ function showDetail(){
 				.children[3]
 				.children[1]
 				.innerHTML = parent.attr("vote");
-			$(".detail-box").css({top:"50%",right: "50%"})[0]；
+			$(".detail-box").css({top:"50%",right: "50%"});
 		}
 	})
 	$(".submit-boxing").click(function(){
