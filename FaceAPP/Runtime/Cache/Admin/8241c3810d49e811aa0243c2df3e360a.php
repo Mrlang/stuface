@@ -79,9 +79,17 @@
 
 
 
-
-<p style="font-size:50px; text-align:center; margin-top: 275px">we are managers</p>
-
+<div style=" position: absolute; top:100px;width: 80%; height:600px; text-align: center; overflow:scroll; border: 2px solid #0000FF;">
+	<?php
+ foreach ($message as $key){ ?>
+	<p style="postion: relative;">
+		名字：<?php echo $key['stu_name']; ?>    
+		学号：<?php echo $key['uid']; ?>
+		性别：<?php echo $key['sex']; ?>
+	</p>
+	<?php
+ } ?>
+</div>
 <script src="/stuface/Public/js/jquery-1.11.1.min.js"></script>
 <script src="/stuface/Public/js/bootstrap.min.js"></script>
 <script type="text/javascript">

@@ -9,6 +9,7 @@ class UploadpicController extends Controller {
             window.location.href='".U('Index/index')."'</script>";
         }
     }
+    
     public function index(){
         $this->display();
     }
