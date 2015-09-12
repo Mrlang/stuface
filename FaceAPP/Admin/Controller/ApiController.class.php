@@ -6,7 +6,7 @@ class ApiController extends Controller {
 		$where = [
 			'is_pass' => 1,
 		];
-		$message = M('image')->where($where)->join('tbl_user ON tbl_image.uid = tbl_user.uid')->order('vote')->select();
+		$message = M('user')->where($where)->join('tbl_image ON tbl_user.uid = tbl_image.uid')->order('vote')->select();
 		$this->assign('message', $message);
 		$this->display();
 	}
