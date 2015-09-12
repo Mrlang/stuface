@@ -52,7 +52,7 @@ function showDetail(){
 				parent = $($(target).parents(".speciel").context);
 			}
 			$(".submit-boxing").css('display', "block");
-			$(".detail-box")
+			$(".detail-box")[0]
 				.children[1]
 				.children[0].
 				src = "Public/allimage/" + parent.attr("big-pic");
