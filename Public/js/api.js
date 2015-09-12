@@ -52,7 +52,7 @@ function showDetail(){
 				parent = $($(target).parents(".speciel").context);
 			}
 			$(".submit-boxing").css('display', "block");
-			$(".detail-box").css({top:"50%",right: "50%"})[0]
+			$(".detail-box")
 				.children[1]
 				.children[0].
 				src = "Public/allimage/" + parent.attr("big-pic");
@@ -63,7 +63,7 @@ function showDetail(){
 				.children[3]
 				.children[1]
 				.innerHTML = parent.attr("vote");
-			$(".detail-box")[0]
+			$(".detail-box").css({top:"50%",right: "50%"});
 		}
 	})
 	$(".submit-boxing").click(function(){

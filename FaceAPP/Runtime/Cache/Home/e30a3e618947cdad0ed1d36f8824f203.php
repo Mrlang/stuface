@@ -238,7 +238,11 @@
 	<script src="/stuface/Public/js/jQuery.js"></script>
 	<script src="/stuface/Public/js/api.js"></script>
 	<script>
+<<<<<<< HEAD
 	console.log("page_test");
+=======
+	console.log("page_test1");
+>>>>>>> fbce54d86ca5bbeb360b092c4e470a59a93eeb6e
 		var check_login = false,
 			api,
 			get_focus;
@@ -255,7 +259,11 @@
 					if(timer == false){
 						return;
 					}
+<<<<<<< HEAD
 					get(button_val);
+=======
+					timer = false;
+>>>>>>> fbce54d86ca5bbeb360b092c4e470a59a93eeb6e
 					var button_val = parseInt(button_val) || 1;
 					if(button_val == 1 || button_val == page_length){
 						if(button_val == 1){
@@ -326,6 +334,7 @@
 					if(page_length == 0){
 						$(footer[6]).css('display',"none");
 					}
+					get(button_val);
 				}
 				function addlisten(){
 					$(".page").css('margin-left',(1018 - parseFloat($(".page").width()))/2);
