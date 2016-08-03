@@ -238,11 +238,7 @@
 	<script src="/stuface/Public/js/jQuery.js"></script>
 	<script src="/stuface/Public/js/api.js"></script>
 	<script>
-<<<<<<< HEAD
-	console.log("page_test");
-=======
 	console.log("page_test1");
->>>>>>> fbce54d86ca5bbeb360b092c4e470a59a93eeb6e
 		var check_login = false,
 			api,
 			get_focus;
@@ -259,11 +255,7 @@
 					if(timer == false){
 						return;
 					}
-<<<<<<< HEAD
-					get(button_val);
-=======
 					timer = false;
->>>>>>> fbce54d86ca5bbeb360b092c4e470a59a93eeb6e
 					var button_val = parseInt(button_val) || 1;
 					if(button_val == 1 || button_val == page_length){
 						if(button_val == 1){
@@ -351,7 +343,6 @@
 					})
 				}
 				function get(button_val){
-					timer = false;
 					$.post("<?php echo U('Home/Index/get_pic');?>","btn=" + button_val,function (data) {
 						data = normal_data || data;
 						showData(data);
@@ -433,7 +424,7 @@
 				sm_box = $(".waiting-outer"),
 				show = $(".show-submit-box"),
 				w = $(".w"),
-				exp = /^(2015)/;
+				exp = /^(2014)/;
 			check();
 			$(".submit").click(function () {
 				name = name_input.val();

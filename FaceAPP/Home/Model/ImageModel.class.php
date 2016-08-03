@@ -66,9 +66,9 @@ use Think\Model;
 		    if(I('get.limit') == '综合')
 		       	session('order',null);
 			if(I('get.sex') == '妹子') 
-		        session('sex',1);
+		        session('sex','女');
 		    if(I('get.sex') == '汉子') 
-		        session('sex',0);
+		        session('sex','男');
 		    if(I('get.sex') == '全部') 
 		        session('sex',null);  
 		    
