@@ -4,10 +4,10 @@ return array(
 	//'SHOW_PAGE_TRACE' 		=>	true,			//页面Trace
 
 	'DB_TYPE'               =>  'mysql',     	// 数据库类型
-    'DB_HOST'               =>  'localhost', 	// 服务器地址
-    'DB_NAME'               =>  'smileface',    // 数据库名
-    'DB_USER'               =>  'root',      	// 用户名
-    'DB_PWD'                =>  '123456',          	// 密码
+    'DB_HOST'               =>  'db2.lot.cat', 	// 服务器地址
+    'DB_NAME'               =>  'stuface',    // 数据库名
+    'DB_USER'               =>  'stuface',      	// 用户名
+    'DB_PWD'                =>  '7e8376b692e80d2532d908cc96880eb8',          	// 密码
     'DB_PORT'               =>  '3306',        	// 端口
     'DB_CHARSET'            =>  'utf8',
 	'DB_PREFIX'             =>  'tbl_',     	//设置表前缀

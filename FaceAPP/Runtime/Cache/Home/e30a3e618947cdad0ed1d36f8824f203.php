@@ -14,7 +14,7 @@
 				<img src="/Public/img/school-logo.png" alt="">
 				<ul class="nav">
 					<li><a href="http://hongyan.cqupt.edu.cn/">红岩网校</a></li>
-					<li><a href="http://hongyan.cqupt.edu.cn/welcome/2015/">2015新生专题网</a></li>
+					<li><a href="http://hongyan.cqupt.edu.cn/welcome/2016/">2016新生专题网</a></li>
 					<li><a href="http://hongyan.cqupt.edu.cn/aboutus/">关于我们</a></li>
 					<li class="show-submit-box"><a>新生登陆</a></li>
 				</ul>
@@ -35,10 +35,10 @@
 					<div class="cqupt-helper">
 						<img class="cqupt" src="/Public/img/cqupt-helper.jpg" alt="">
 					</div>
-					
+
 					<div class="about-activity">
 						<p><span class="activity-time">活动时间：</span>本次线上参与活动时间为<span class="activity-detime">9月9日8：00——9月11日0：00</span></p>
-						<p class="about-people"><span class="activity-people">活动对象：</span><span class="student-2015">2015级</span>所有小鲜肉</p>
+						<p class="about-people"><span class="activity-people">活动对象：</span><span class="student-2015">2016级</span>所有小鲜肉</p>
 						<p class="activity-way">参与方式</p>
 						<p>方式一：上传自己的“笑脸”照片（每人限一张）参与活动。</p>
 						<p>方式二：9月9日至10日在雨红莲操场和风雨操场参与拍照活动。</p>
@@ -47,7 +47,7 @@
 						<p class="career-show">我们将会在9月13日19：00点2100教室展示最美笑脸</p>
 					</div>
 				</div>
-				
+
 			</div>
 			<!-- 笑脸展示 -->
 			<div class="smile-face">
@@ -75,10 +75,10 @@
 					</div>
 					<div class="smile-face-photo">
 						<div class="one-row">
-							
+
 						</div>
-						
-						
+
+
 					</div>
 					<!-- 翻页 -->
 					<div class="page-outer">
@@ -123,7 +123,7 @@
 				<img src="/Public/img/dividing.png" alt="" class="pwd-dividing"><br>
 			</form>
 			<a class="submit">登陆</a>
-			
+
 		</div>
 		<!-- 照片上传窗口 -->
 		<div class="submit-boxing"></div>
@@ -339,7 +339,7 @@
 							display($(this).text());
 						}
 						$(".page").css('margin-left',(1018 - parseFloat($(".page").width()))/2);
-						
+
 					})
 				}
 				function get(button_val){
@@ -347,7 +347,7 @@
 						data = normal_data || data;
 						showData(data);
 					});
-					
+
 				}
 				function getFoucs(){
 					return focus;
@@ -395,7 +395,7 @@
 				addlisten();
 			})
 		}
-		function changeSort () {		
+		function changeSort () {
 			$("#inf01").children().click(function (e) {
 				$("#con01").html($(this).html());
 				$.get("<?php echo U('Home/Index/get_pic');?>","limit=" + $(this).text(),function (data) {
@@ -424,7 +424,7 @@
 				sm_box = $(".waiting-outer"),
 				show = $(".show-submit-box"),
 				w = $(".w"),
-				exp = /^(2014)/;
+				exp = /^(2016)/;
 			check();
 			$(".submit").click(function () {
 				name = name_input.val();
@@ -458,7 +458,7 @@
 						sm_box.click(function () {
 							window.location = window.location.href;
 						})
-						
+
 						check();
 					})
 				},1000)
@@ -611,9 +611,9 @@
 				box.css('display',"none");
 				data.append("phone",phone.val());
 				//setTimeout(function () {
-					xhr = new XMLHttpRequest();  
-					xhr.open( "POST", "<?php echo U('Home/Index/uploadpic');?>" ,true);  
-					xhr.onload = function(res) {  
+					xhr = new XMLHttpRequest();
+					xhr.open( "POST", "<?php echo U('Home/Index/uploadpic');?>" ,true);
+					xhr.onload = function(res) {
 						if (xhr.status == 200) { //上传图片功能 这里我向你发送文件后 你需要判断是否上传成功 返回true或者false
 							uploading_wait.css('display',"none");
 							if(res.currentTarget.response == "true"){
@@ -621,11 +621,11 @@
 							}else{
 								fail.css('display',"block");
 							}
-						} 
-					};  
-					xhr.send(data);  
+						}
+					};
+					xhr.send(data);
 				//},2000);
-				
+
 			})
 			sm_box.click(function () {
 				type_err.parent().css('display',"none");
