@@ -32,13 +32,13 @@
 		var id = document.getElementById('showpic').title;
 		if(id){
 			var xhr = new XMLHttpRequest();
-			xhr.open("POST", "<{:U('Check/pass')}>");
+			xhr.open("POST", "./<{:U('Check/pass')}>");
 			xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 			xhr.send('stunum='+id);
 			xhr.onload = function(){
 				if(xhr.responseText){
 					alert("pass! 已可以在主页显示");
-					window.location.href = "<{:U('Check/index')}>";
+					window.location.href = "./<{:U('Check/index')}>";
 				}else{
 					alert("通过失败");
 				}
@@ -52,13 +52,13 @@
 		var id = document.getElementById('showpic').title;
 		if(id){
 			var xhr = new XMLHttpRequest();
-			xhr.open("POST", "<{:U('Check/delete')}>");
+			xhr.open("POST", "./<{:U('Check/delete')}>");
 			xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 			xhr.send('stunum='+id);
 			xhr.onload = function(){
 				if(xhr.responseText){
 					alert("已从数据库删除");
-					window.location.href = "<{:U('Check/index')}>";
+					window.location.href = "./<{:U('Check/index')}>";
 				}else{
 					alert("通过失败");
 				}
