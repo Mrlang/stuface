@@ -9,11 +9,8 @@ class IndexController extends Controller {
     public function login(){
         $manager = I('manager');
         $password = I('password');
-        $where = [
-            "manager" => $manager,
-            "password" => $password, 
-        ];
-        if(M('manager')->where($where)->select()){
+
+        if($manager=='redrockstaff' && $password=='redrockstaff'){
             session('manager', $manager);
             $this->ajaxReturn("true");
         }
