@@ -21,8 +21,8 @@
 <script>
 	function showpic(pic){
 		var show = document.getElementById('showpic');
-		url = "__PUBLIC__/allimage/" + pic.name;
-		show.style.backgroundImage = "url('"+url+"')"; 
+		url = "./__PUBLIC__/allimage/" + pic.name;
+		show.style.backgroundImage = "url('"+url+"')";
 		var id = pic.title;
 		show.title = id;
 	}
@@ -66,6 +66,6 @@
 		}else{
 			alert("请先选择照片");
 		}
-	} 
+	}
 </script>
 <include file="Index/footer" />
