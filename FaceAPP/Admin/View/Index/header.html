@@ -3,7 +3,7 @@
 <head>
   <meta charest="utf-8">
   <title>后台管理系统</title>
-	<link href="__PUBLIC__/css/bootstrap.min.css" rel="stylesheet">
+	<link href="./__PUBLIC__/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
   <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
@@ -22,7 +22,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li>
           <a href="#" data-toggle="modal" data-target=".bs-modal-signUp1" id="sub">
-          <?php 
+          <?php
             if(session('manager')){
               echo "退出";
               echo "<script>
@@ -30,7 +30,7 @@
                     sub.onclick = function(){
                       window.location.href='".U('Index/logout')."';
                       sub.childNodes == '登陆';
-                    }     
+                    }
                     </script>";
             }else{
               echo "登陆";
@@ -73,15 +73,3 @@
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
