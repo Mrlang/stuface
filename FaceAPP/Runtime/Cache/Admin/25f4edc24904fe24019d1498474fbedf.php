@@ -68,9 +68,21 @@
   </div>
 </div>
 
-
-<p style="font-size:50px; text-align:center; margin-top: 275px">we are managers</p>
-
+<div class="row">
+	<form role="form" method="post" action="./<?php echo U('Addvote/addvote');?>"  enctype="multipart/form-data">
+		<div style="position:absolute; left:400px;top:200px;">
+			<div class="form-group col-md-4 col-md-offset-1">
+				<input type="text" name="pic_id" class="form-control" placeholder="笑脸编号"></input>
+			</div>
+			<div class="form-group col-md-4 col-md-offset-2">
+				<input type="text" name="vote" class="form-control" placeholder="票数"></input>
+			</div>
+			<div class="form-group col-md-1 col-md-offset-5">
+	  			<input type="submit" class="btn btn-success">
+			</div>
+		</div>
+	</form>
+</div>
 <script src=".//Public/js/jquery-1.11.1.min.js"></script>
 <script src=".//Public/js/bootstrap.min.js"></script>
 <script type="text/javascript">

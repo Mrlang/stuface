@@ -129,7 +129,7 @@
 		<div class="submit-boxing"></div>
 		<div class="uploading-box">
 			<div class="uploading-pic-box">
-			<form class="p_form" method="post" action="<?php echo U('Home/Index/upload');?>" enctype="multipart/form-data">
+			<form class="p_form" method="post" action="./<?php echo U('Home/Index/upload');?>" enctype="multipart/form-data">
 				<input type="file" class="add-in-file" name="photo">
 			</form>
 				<img class="upload-img add-in" src=".//Public/img/add-in.png" alt="">
@@ -243,7 +243,7 @@
 			api,
 			get_focus;
 		function page (container,footer,normal_data) {
-			$.get("<?php echo U('Home/Index/get_page');?>", "fetchpage=1", function (data) {
+			$.get("./<?php echo U('Home/Index/get_page');?>", "fetchpage=1", function (data) {
 				var page_length = data,
 					focus = $(footer[1]),
 					focusNum = 1,
@@ -343,7 +343,7 @@
 					})
 				}
 				function get(button_val){
-					$.post("<?php echo U('Home/Index/get_pic');?>","btn=" + button_val,function (data) {
+					$.post("./<?php echo U('Home/Index/get_pic');?>","btn=" + button_val,function (data) {
 						data = normal_data || data;
 						showData(data);
 					});
@@ -398,14 +398,14 @@
 		function changeSort () {
 			$("#inf01").children().click(function (e) {
 				$("#con01").html($(this).html());
-				$.get("<?php echo U('Home/Index/get_pic');?>","limit=" + $(this).text(),function (data) {
+				$.get("./<?php echo U('Home/Index/get_pic');?>","limit=" + $(this).text(),function (data) {
 					page($(".one-row"),$(".page li"));
 					$(".page li").removeClass("cur-li");
 				});
 			})
 			$("#inf02").children().click(function (e) {
 				$("#con02").html($(this).html());
-				$.get("<?php echo U('Home/Index/get_pic');?>","sex=" + $(this).text(),function (data) {
+				$.get("./<?php echo U('Home/Index/get_pic');?>","sex=" + $(this).text(),function (data) {
 					page($(".one-row"),$(".page li"));
 					$(".page li").removeClass("cur-li");
 				});
@@ -441,7 +441,7 @@
 					return;
 				}
 				setTimeout(function () {
-					$.post("<?php echo U('Home/Index/log');?>","username=" + name + "&&password=" + pass,function (res) {
+					$.post("./<?php echo U('Home/Index/log');?>","username=" + name + "&&password=" + pass,function (res) {
 						console.log(res);
 						if(res.status == 200){
 							waiting.html('<p class="logining">登陆成功</p><img class="w" src=".//Public/img/w.png">');
@@ -465,13 +465,13 @@
 			})
 			//...............................注销模块.........................................
 			function check(){
-				$.get("<?php echo U('Home/Index/checklog');?>","",function (res) {
+				$.get("./<?php echo U('Home/Index/checklog');?>","",function (res) {
 					if(res){
 						check_login = true;
 						show.html("<a>注销</a>");
 						show.unbind();
 						show.click(function () {
-							$.get("<?php echo U('Home/Index/log_out');?>","",function (res) {//注销功能 向后台发送一个GET请求 你取消掉他{}的SESSION
+							$.get("./<?php echo U('Home/Index/log_out');?>","",function (res) {//注销功能 向后台发送一个GET请求 你取消掉他{}的SESSION
 								if(res){
 									window.location = window.location.href;
 
@@ -500,7 +500,7 @@
 				uid = target.parents(".speciel ").attr("uid");
 				if(target.attr("class") == "love-nolove"){
 					if(check_login){
-						$.post("<?php echo U('Home/Index/vote');?>","uid=" + uid,function (res) {
+						$.post("./<?php echo U('Home/Index/vote');?>","uid=" + uid,function (res) {
 							focus = get_focus();
 							api(focus.text());
 							var res;
@@ -612,7 +612,7 @@
 				data.append("phone",phone.val());
 				//setTimeout(function () {
 					xhr = new XMLHttpRequest();
-					xhr.open( "POST", "<?php echo U('Home/Index/uploadpic');?>" ,true);
+					xhr.open( "POST", "./<?php echo U('Home/Index/uploadpic');?>" ,true);
 					xhr.onload = function(res) {
 						if (xhr.status == 200) { //上传图片功能 这里我向你发送文件后 你需要判断是否上传成功 返回true或者false
 							uploading_wait.css('display',"none");
@@ -648,7 +648,7 @@
 				if(value.replace(/\s/g, "") == ""){
 					return;
 				}
-				$.get("<?php echo U('Home/Index/get_pic');?>","search=" + value,function (res) {
+				$.get("./<?php echo U('Home/Index/get_pic');?>","search=" + value,function (res) {
 					page($(".one-row"),$(".page li"),res);
 				})
 			})
