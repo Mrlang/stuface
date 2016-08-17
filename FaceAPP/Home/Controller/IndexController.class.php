@@ -3,7 +3,7 @@ namespace Home\Controller;
 use Think\Controller;
 class IndexController extends Controller {
     public function index(){
-        $a = M('User')->where(array('uid'=>2016214597))->find();
+    	$a = M('User')->where(array('uid'=>2016214597))->find();
         $b = M('User')->where(array('uid'=>2016212655))->find();
         $this->assign('sex1',$a->sex);
         $this->assign('sex2',$b->sex);
