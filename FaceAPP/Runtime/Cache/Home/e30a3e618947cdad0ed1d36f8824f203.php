@@ -41,10 +41,8 @@
 						<p class="about-people"><span class="activity-people">活动主题：</span>新生笑脸征集——晒晒通知书</p>
 						<p class="about-people"><span class="activity-people">活动对象：</span><span class="student-2015">2016级</span>所有小鲜肉</p>
 						<p class="activity-way">参与方式</p>
-						<p>方式一：上传自己的“笑脸”照片（每人限一张）参与活动。</p>
-						<p>方式二：9月9日至10日在雨红莲操场和风雨操场参与拍照活动。</p>
-						<p class="pic-content">照片内容：“笑脸”照片可以是新生自己和各大重邮建筑合照。</p>
-						<!-- <p class="career-show">我们将会在9月13日19：00点2100教室展示最美笑脸</p> -->
+						<p>上传自己的“笑脸”照片（每人限一张）参与活动。</p>
+						<p class="pic-content">照片内容：“笑脸”照片可以是新生、家人和录取通知书合照。</p>
 						<p class="career-talk">红岩网校工作站2016新生交流群:459832901</p>
 					</div>
 				</div>
