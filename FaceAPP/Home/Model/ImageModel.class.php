@@ -9,7 +9,7 @@ use Think\Model;
 			$data['big_pic'] = $big_name;
 			$data['uid'] = I('session.uid');
 			$data['time'] = date('Y-m-d H:i:s',time());
-			if(I('session.user_sex') != null)
+			if(I('session.user_sex') == '男' || I('session.user_sex') == '女' )
 				$data['sex'] = I('session.user_sex');
 			if(I('post.phone') != null){
 				$save['phone'] = I('post.phone');
