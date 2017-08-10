@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>新生笑脸</title>
-	<link rel="stylesheet" href=".//stuface/Public/css/style.css">
+	<link rel="stylesheet" href=".//Public/css/style.css">
 
 </head>
 <body>
@@ -11,7 +11,7 @@
 		<!-- 顶部 重邮Logo 登陆按钮 -->
 		<div class="top-container">
 			<div class="top">
-				<img src=".//stuface/Public/img/school-logo.png" alt="">
+				<img src=".//Public/img/school-logo.png" alt="">
 				<ul class="nav">
 					<li><a href="http://hongyan.cqupt.edu.cn/">红岩网校</a></li>
 					<li><a href="http://hongyan.cqupt.edu.cn/welcome/2016/">2016新生专题网</a></li>
@@ -23,17 +23,17 @@
 		<!-- 内容 -->
 		<div class="content">
 			<!-- 上传按钮 -->
-			<img class="rocket" src=".//stuface/Public/img/2016.png" alt="">
+			<img class="rocket" src=".//Public/img/2016.png" alt="">
 			<div id="uploading">
-				<img class="stone" src=".//stuface/Public/img/stone.png" alt="">
+				<img class="stone" src=".//Public/img/stone.png" alt="">
 			</div>
 			<!-- 活动详情 -->
 			<div class="activity-detail">
-				<img src=".//stuface/Public/img/活动详情.png" alt="">
+				<img src=".//Public/img/活动详情.png" alt="">
 				<div class="activity-content">
-					<img class="person" src=".//stuface/Public/img/人物.png">
+					<img class="person" src=".//Public/img/人物.png">
 					<div class="cqupt-helper">
-						<img class="cqupt" src=".//stuface/Public/img/cqupt-helper.jpg" alt="">
+						<img class="cqupt" src=".//Public/img/cqupt-helper.jpg" alt="">
 					</div>
 
 					<div class="about-activity">
@@ -41,18 +41,16 @@
 						<p class="about-people"><span class="activity-people">活动主题：</span>新生笑脸征集——晒晒通知书</p>
 						<p class="about-people"><span class="activity-people">活动对象：</span><span class="student-2015">2016级</span>所有小鲜肉</p>
 						<p class="activity-way">参与方式</p>
-						<p>方式一：上传自己的“笑脸”照片（每人限一张）参与活动。</p>
-						<p>方式二：9月9日至10日在雨红莲操场和风雨操场参与拍照活动。</p>
-						<p class="pic-content">照片内容：“笑脸”照片可以是新生自己和各大重邮建筑合照。</p>
-						<!-- <p class="career-show">我们将会在9月13日19：00点2100教室展示最美笑脸</p> -->
-						<p class="career-talk">红岩网校工作站2016新生交流群:459832901</p>
+						<p>上传自己的“笑脸”照片（每人限一张）参与活动。</p>
+						<p class="pic-content">照片内容：“笑脸”照片可以是新生、家人和录取通知书合照。</p>
+						<p class="career-talk">红岩网校工作站2016新生交流群:459832901<?php echo ($sex1); ?>..<?php echo ($sex2); ?></p>
 					</div>
 				</div>
 
 			</div>
 			<!-- 笑脸展示 -->
 			<div class="smile-face">
-				<img src=".//stuface/Public/img/笑脸展示.png" alt="">
+				<img src=".//Public/img/笑脸展示.png" alt="">
 				<div>
 					<div class="select-condition">
 						<div class="condition-left">
@@ -71,7 +69,7 @@
 						</div>
 						<div class="condition-right">
 							<input type="text" class="search" placeholder="输入笑脸编号">
-							<img src=".//stuface/Public/img/搜索按钮.png" alt="" class="search-btn">
+							<img src=".//Public/img/搜索按钮.png" alt="" class="search-btn">
 						</div>
 					</div>
 					<div class="smile-face-photo">
@@ -97,7 +95,7 @@
 			</div>
 			<!-- 回到顶部 -->
 			<div class="toTop">
-				<img src=".//stuface/Public/img/toTop.png" alt="">
+				<img src=".//Public/img/toTop.png" alt="">
 			</div>
 			<!-- 声明信息 -->
 			<div class="foot">
@@ -117,11 +115,11 @@
 		<div class="submit-box">
 			<form action="">
 				<input type="text" class="name" placeholder="请输入学号">
-				<img src=".//stuface/Public/img/name.png" alt="" class="usrname">
-				<img src=".//stuface/Public/img/dividing.png" alt="" class="name-dividing">
+				<img src=".//Public/img/name.png" alt="" class="usrname">
+				<img src=".//Public/img/dividing.png" alt="" class="name-dividing">
 				<input type="password" class="password" placeholder="身份证后六位">
-				<img src=".//stuface/Public/img/password.png" alt="" class="usrpwd">
-				<img src=".//stuface/Public/img/dividing.png" alt="" class="pwd-dividing"><br>
+				<img src=".//Public/img/password.png" alt="" class="usrpwd">
+				<img src=".//Public/img/dividing.png" alt="" class="pwd-dividing"><br>
 			</form>
 			<a class="submit">登陆</a>
 
@@ -133,7 +131,7 @@
 			<form class="p_form" method="post" action="./<?php echo U('Home/Index/upload');?>" enctype="multipart/form-data">
 				<input type="file" class="add-in-file" name="photo">
 			</form>
-				<img class="upload-img add-in" src=".//stuface/Public/img/add-in.png" alt="">
+				<img class="upload-img add-in" src=".//Public/img/add-in.png" alt="">
 				<div class="reupload">
 					重选
 				</div>
@@ -142,26 +140,26 @@
 			<input class="phone_number" type="text">
 			<span class="important">*</span>
 			<p>我们不会透露你的联系方式</p>
-			<img src=".//stuface/Public/img/publish.png" class="hand-in">
+			<img src=".//Public/img/publish.png" class="hand-in">
 		</div>
 		<!-- 照片上传成功窗口 -->
 		<div class="submit-boxing"></div>
 		<div class="uploading-success-box">
-			<img src=".//stuface/Public/img/push-sucess.png" alt="" class="success-icon">
+			<img src=".//Public/img/push-sucess.png" alt="" class="success-icon">
 			<p>关注重邮小帮手（微信号：cyxbswx）并绑定学号，我们将审核结果推送给你</p>
-			<img src=".//stuface/Public/img/cqupt-helper.jpg" alt="" class="cqupt-helper">
-			<img src=".//stuface/Public/img/确认.png" alt="" class="confirm">
+			<img src=".//Public/img/cqupt-helper.jpg" alt="" class="cqupt-helper">
+			<img src=".//Public/img/确认.png" alt="" class="confirm">
 		</div>
 		<!-- 查看详情 -->
 		<div class="submit-boxing"></div>
 		<div class="detail-box">
 			<span class="ranking">top1</span>
 			<div class="person-img">
-				<img src=".//stuface/Public/img/person.png" alt="">
+				<img src=".//Public/img/person.png" alt="">
 			</div>
 			<span class="smile-id">笑脸编号:28</span>
 			<div class="love">
-				<img src=".//stuface/Public/img/love.png" alt="">
+				<img src=".//Public/img/love.png" alt="">
 				<span class="love-people">27</span>
 			</div>
 		</div>
@@ -169,13 +167,13 @@
 			<p class="logining">
 				请先登陆
 			</p>
-			<img class="w" src=".//stuface/Public/img/w.png">
+			<img class="w" src=".//Public/img/w.png">
 		</div>
 		<div class="vote-success">
 			<p class="logining">
 				投票成功
 			</p>
-			<img class="w" src=".//stuface/Public/img/w.png">
+			<img class="w" src=".//Public/img/w.png">
 		</div>
 		<div class="waiting-outer"></div>
 		<div class="waiting-o">
@@ -204,15 +202,15 @@
 			</div>
 		</div>
 		<div class="fail">
-			<img src=".//stuface/Public/img/type-err.png">
+			<img src=".//Public/img/type-err.png">
 			<input class="close-err" type="button">
 		</div>
 		<div class="fail-err">
-			<img src=".//stuface/Public/img/fail.png">
+			<img src=".//Public/img/fail.png">
 			<input class="close-err" type="button">
 		</div>
 		<div class="uploading-wait">
-			<img class="uploading-w" src=".//stuface/Public/img/uploading-w.png">
+			<img class="uploading-w" src=".//Public/img/uploading-w.png">
 			<input class="close-err close-uploading" type="button">
 			<div class="spinner">
 				<div class="spinner-container container1">
@@ -236,8 +234,8 @@
 			</div>
 		</div>
 	</div>
-	<script src=".//stuface/Public/js/jQuery.js"></script>
-	<script src=".//stuface/Public/js/api.js"></script>
+	<script src=".//Public/js/jQuery.js"></script>
+	<script src=".//Public/js/api.js"></script>
 	<script>
 	console.log("page_test1");
 		var check_login = false,
@@ -387,7 +385,7 @@
 						}else{
 							obj.class_name = "";
 						}
-						oDiv = '<div top=' + obj.id + ' vote=' + obj.vote　+ ' uid=' + obj.uid + ' big-pic=' + obj.big_pic +' class="speciel ' + obj.class_name +'"><span class="ranking">'+"top" + obj.id +'</span><div class="person-img"><img src=".//stuface/Public/allimage/'+ obj.pic +'" alt=""></div><img src=".//stuface/Public/img/love.png" alt="" class="love-nolove"><span class="love-people">'+ obj.vote +'</span><img class="detail" src=".//stuface/Public/img/详情.png" alt=""></div>';
+						oDiv = '<div top=' + obj.id + ' vote=' + obj.vote　+ ' uid=' + obj.uid + ' big-pic=' + obj.big_pic +' class="speciel ' + obj.class_name +'"><span class="ranking">'+"top" + obj.id +'</span><div class="person-img"><img src=".//Public/allimage/'+ obj.pic +'" alt=""></div><img src=".//Public/img/love.png" alt="" class="love-nolove"><span class="love-people">'+ obj.vote +'</span><img class="detail" src=".//Public/img/详情.png" alt=""></div>';
 						container.append(oDiv);
 					}
 					timer = true;
@@ -435,7 +433,7 @@
 				submit_boxing.css('display',"none");
 				$(".submit-box").css('top',"-283px");
 				if(!exp.test(name)){
-					waiting.html('<p class="logining">你不是小鲜肉</p><img class="w" src=".//stuface/Public/img/w.png">');
+					waiting.html('<p class="logining">你不是小鲜肉</p><img class="w" src=".//Public/img/w.png">');
 					setTimeout(function () {
 						window.location = window.location.href;
 					},2000);
@@ -445,13 +443,13 @@
 					$.post("./<?php echo U('Home/Index/log');?>","username=" + name + "&&password=" + pass,function (res) {
 						console.log(res);
 						if(res.status == 200){
-							waiting.html('<p class="logining">登陆成功</p><img class="w" src=".//stuface/Public/img/w.png">');
+							waiting.html('<p class="logining">登陆成功</p><img class="w" src=".//Public/img/w.png">');
 							setTimeout(function () {
 								window.location = window.location.href;
 							},2000);
 							check();
 						}else if(res.status == 111){
-							waiting.html('<p class="logining">账号密码错误</p><img class="w" src=".//stuface/Public/img/w.png">');
+							waiting.html('<p class="logining">账号密码错误</p><img class="w" src=".//Public/img/w.png">');
 							setTimeout(function () {
 								window.location = window.location.href;
 							},2000);
@@ -590,7 +588,7 @@
 					b_check = true;
 					data = new FormData($(".p_form")[0]);
 				}
-				$(".hand-in").attr('src',".//stuface/Public/img/readyPublish.png");
+				$(".hand-in").attr('src',".//Public/img/readyPublish.png");
 				reupload.css('display',"block");
 				$(".add-in").css("display","none");
 			})

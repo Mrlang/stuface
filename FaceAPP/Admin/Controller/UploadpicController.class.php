@@ -49,7 +49,7 @@ class UploadpicController extends Controller {
                     'vote' => 0,
                     'sex' => $sex,
                     'time' => date('Y-m-d H:i:s',time()),
-                    'is_pass' => 0,
+                    'is_pass' => 2,
                 ];
                 M('image')->add($data);
                 $data = [

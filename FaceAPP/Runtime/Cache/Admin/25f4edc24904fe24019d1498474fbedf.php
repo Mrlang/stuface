@@ -1,41 +1,35 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
 <head>
   <meta charest="utf-8">
   <title>后台管理系统</title>
-	<link href="./__PUBLIC__/css/bootstrap.min.css" rel="stylesheet">
+	<link href=".//Public/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
   <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
     <div class="container">
       <div class="navbar-header">
-        <a class="navbar-brand" href="./<{:U('Index/index')}>">管理系统</a>
+        <a class="navbar-brand" href="./<?php echo U('Index/index');?>">管理系统</a>
       </div>
       <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-	      <li><a href="./<{:U('Check/index')}>">照片审核</a></li>
-        <li><a href="./<{:U('Uploadpic/index')}>">照片上传</a></li>
-        <li><a href="./<{:U('Addvote/index')}>">投票管理</a></li>
-        <li><a href="./<{:U('Api/index')}>">笑脸排名数据接口</a></li>
-	      <li><a href="./<{:U('Home/Index/index')}>">笑脸迎新网</a></li>
+	      <li><a href="./<?php echo U('Check/index');?>">照片审核</a></li>
+        <li><a href="./<?php echo U('Uploadpic/index');?>">照片上传</a></li>
+        <li><a href="./<?php echo U('Addvote/index');?>">投票管理</a></li>
+        <li><a href="./<?php echo U('Api/index');?>">笑脸排名数据接口</a></li>
+	      <li><a href="./<?php echo U('Home/Index/index');?>">笑脸迎新网</a></li>
 	    </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
           <a href="#" data-toggle="modal" data-target=".bs-modal-signUp1" id="sub">
           <?php
-            if(session('manager')){
-              echo "退出";
-              echo "<script>
+ if(session('manager')){ echo "退出"; echo "<script>
                     var sub = document.getElementById('sub');
                     sub.onclick = function(){
                       window.location.href='".U('Index/logout')."';
                       sub.childNodes == '登陆';
                     }
-                    </script/>";
-            }else{
-              echo "登陆";
-            }
-          ?>
+                    </script/>"; }else{ echo "登陆"; } ?>
           </a>
         </li>
         <div class="modal fade bs-modal-signUp1" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
@@ -73,3 +67,41 @@
     </div>
   </div>
 </div>
+
+<div class="row">
+	<form role="form" method="post" action="./<?php echo U('Addvote/addvote');?>"  enctype="multipart/form-data">
+		<div style="position:absolute; left:400px;top:200px;">
+			<div class="form-group col-md-4 col-md-offset-1">
+				<input type="text" name="pic_id" class="form-control" placeholder="笑脸编号"></input>
+			</div>
+			<div class="form-group col-md-4 col-md-offset-2">
+				<input type="text" name="vote" class="form-control" placeholder="票数"></input>
+			</div>
+			<div class="form-group col-md-1 col-md-offset-5">
+	  			<input type="submit" class="btn btn-success">
+			</div>
+		</div>
+	</form>
+</div>
+<script src=".//Public/js/jquery-1.11.1.min.js"></script>
+<script src=".//Public/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	var login = document.getElementById('login');
+	login.onclick = function(){
+		var manager = document.getElementById("manager").value;
+		var password = document.getElementById("password").value;
+		var xhr = new XMLHttpRequest();
+		xhr.open("POST", "./<?php echo U('Index/login');?>");
+		xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+		xhr.send('manager='+manager+'&password='+password);
+		xhr.onload = function(){
+			if(xhr.responseText){
+				window.location.href = "./<?php echo U('Index/index');?>";
+			}else{
+				alert("验证失败");
+			}
+		}
+	}
+</script>
+</body>
+</html>

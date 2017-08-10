@@ -68,9 +68,44 @@
   </div>
 </div>
 
-
-<p style="font-size:50px; text-align:center; margin-top: 275px">we are managers</p>
-
+<div class="container">
+	<div class="row">
+		<div class="col-md-offset-3" style="width:600px; height: 450px; margin-top: 100px; margin-bottom: 70px; border: 2px solid #0000FF; background-size:cover" id="showpic"></div>
+		</div>
+		<div class="row">
+			<form role="form" method="post" action="http://hongyan.cqupt.edu.cn/stuface2017/index.php/index/index/uploadImage"  enctype="multipart/form-data">
+	  			<div class="form-group col-md-3 col-md-offset-1">
+	    			<input type="text" name="stuId" class="form-control" placeholder="学号"></input>
+	  			</div>
+	  			<div class="form-group col-md-2 col-md-offset-1">
+	    			<input type="text" name="sex" class="form-control" placeholder="性别"></input>
+	  			</div>
+	  			<div class="form-group col-md-3 col-md-offset-1">
+	    			<input type="text" name="name" class="form-control" placeholder="名字"></input>
+	  			</div>
+	  			<div class="form-group col-md-1 col-md-offset-5">
+	    			<input type="file" name="image" id="pic">
+	  			</div>
+	        <div class="form-group col-md-1 col-md-offset-5">
+	          <input id="sub" type="submit" class="btn btn-success">
+	        </div>
+			</form>
+	    <button class="btn btn-info" id="show">点击预览</button>
+		</div>
+	</div>
+	<script type="text/javascript">
+	var show = document.getElementById('show');
+	show.onclick = function(){
+	  var p = document.getElementById('pic');
+	  var sp = document.getElementById('showpic');
+	  var url = window.URL.createObjectURL(p.files[0]),
+	  	sub = document.getElementById("sub");
+	  sp.style.backgroundImage = "url('"+url+"')";
+	  sub.onclick = function () {
+	  	sub.disabled = "disabled";
+	  }
+	}
+</script>
 <script src=".//Public/js/jquery-1.11.1.min.js"></script>
 <script src=".//Public/js/bootstrap.min.js"></script>
 <script type="text/javascript">
