@@ -5,6 +5,7 @@ class AddvoteController extends Controller {
 	public function index(){
 		$this->display();
 	}
+
 	public function addvote(){
 		$id = I('post.pic_id');
 		$vote = I('post.vote');
