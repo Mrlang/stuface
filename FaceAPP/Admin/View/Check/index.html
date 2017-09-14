@@ -6,7 +6,8 @@
 				foreach ($noPassers as $key) {
 			?>
 		    <li class="list-group-item"><a onclick="showpic(this)" href="#" title="<?php echo $key['uid'] ?>" name="<?php echo $key['pic'] ?>"><?php echo $key['uid'].": ".$key['time'] ?></a></li>
-		    <?php
+		    <a href="http://hongyan.cqupt.edu.cn/stuface2017/public/uploads/<?php echo $key['pic'] ?>" ?>查看大图</a>
+			<?php
 				}
 			?>
 		</ul>
@@ -21,8 +22,8 @@
 <script>
 	function showpic(pic){
 		var show = document.getElementById('showpic');
-		url = "__PUBLIC__/allimage/" + pic.name;
-		show.style.backgroundImage = "url('"+url+"')"; 
+		url = "http://hongyan.cqupt.edu.cn/stuface2017/public/uploads/" + pic.name;
+		show.style.backgroundImage = "url('"+url+"')";
 		var id = pic.title;
 		show.title = id;
 	}
@@ -32,13 +33,13 @@
 		var id = document.getElementById('showpic').title;
 		if(id){
 			var xhr = new XMLHttpRequest();
-			xhr.open("POST", "<{:U('Check/pass')}>");
+			xhr.open("POST", "./<{:U('Check/pass')}>");
 			xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 			xhr.send('stunum='+id);
 			xhr.onload = function(){
 				if(xhr.responseText){
 					alert("pass! 已可以在主页显示");
-					window.location.href = "<{:U('Check/index')}>";
+					window.location.href = "./<{:U('Check/index')}>";
 				}else{
 					alert("通过失败");
 				}
@@ -52,13 +53,13 @@
 		var id = document.getElementById('showpic').title;
 		if(id){
 			var xhr = new XMLHttpRequest();
-			xhr.open("POST", "<{:U('Check/delete')}>");
+			xhr.open("POST", "./<{:U('Check/delete')}>");
 			xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 			xhr.send('stunum='+id);
 			xhr.onload = function(){
 				if(xhr.responseText){
 					alert("已从数据库删除");
-					window.location.href = "<{:U('Check/index')}>";
+					window.location.href = "./<{:U('Check/index')}>";
 				}else{
 					alert("通过失败");
 				}
@@ -66,6 +67,6 @@
 		}else{
 			alert("请先选择照片");
 		}
-	} 
+	}
 </script>
 <include file="Index/footer" />

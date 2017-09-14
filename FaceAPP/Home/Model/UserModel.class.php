@@ -61,10 +61,13 @@ use Think\Model;
 			if(!$flag){
 				$save['uid'] = $data['userInfo']['stu_num'];
 				$save['stu_name'] = $data['userInfo']['real_name'];
-				if($data['userInfo']['gender'] == '男')
-					$save['sex'] = 0;
-				if($data['userInfo']['gender'] == '女')
-					$save['sex'] = 1;
+				if($data['userInfo']['gender'] == '男' || $data['userInfo']['gender'] == '女' )
+					$save['sex'] = $data['userInfo']['gender'];
+
+//				if($data['userInfo']['gender'] == '男')
+//					$save['sex'] = 0;
+//				if($data['userInfo']['gender'] == '女')
+//					$save['sex'] = 1;
 				$M->add($save);
 			}	
 		}

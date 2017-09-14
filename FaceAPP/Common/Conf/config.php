@@ -1,13 +1,13 @@
 <?php
 return array(
 	
-	//'SHOW_PAGE_TRACE' 		=>	true,			//页面Trace
+	'SHOW_PAGE_TRACE' 		=>	true,			//页面Trace
 
 	'DB_TYPE'               =>  'mysql',     	// 数据库类型
-    'DB_HOST'               =>  'localhost', 	// 服务器地址
-    'DB_NAME'               =>  'smileface',    // 数据库名
-    'DB_USER'               =>  'root',      	// 用户名
-    'DB_PWD'                =>  '',          	// 密码
+    'DB_HOST'               =>  '10.9.29.223', 	// 服务器地址
+    'DB_NAME'               =>  'stuface2017',    // 数据库名
+    'DB_USER'               =>  'llp',      	// 用户名
+    'DB_PWD'                =>  'Redr0ck;D0nt;Fuck;Me;',          	// 密码
     'DB_PORT'               =>  '3306',        	// 端口
     'DB_CHARSET'            =>  'utf8',
 	'DB_PREFIX'             =>  'tbl_',     	//设置表前缀

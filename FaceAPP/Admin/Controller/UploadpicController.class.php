@@ -9,6 +9,7 @@ class UploadpicController extends Controller {
             window.location.href='".U('Index/index')."'</script>";
         }
     }
+    
     public function index(){
         $this->display();
     }
@@ -18,13 +19,18 @@ class UploadpicController extends Controller {
         $stunum = I('post.stunum');
         $name = I('post.name');
         $sex = I('post.sex');
+        if($sex == '1'){
+            $sex = '女';
+        }else if($sex == '0'){
+            $sex = '男';
+        }
         $file = substr(strrchr($_FILES['picture']['name'], '.'), 1);
         if($stunum && $name && $sex && $file){
             if($file == 'jpg' || $file == 'jpeg' || $file == 'png' || $file == 'gif'){
-                $filename = $name.".".$file;
+                $filename = $stunum.".".$file;
                 $path1 = "Public/upimage/".$filename;
                 move_uploaded_file($_FILES['picture']['tmp_name'] , $path1);
-                $bigname = $name."_big.".$file;
+                $bigname = $stunum."_big.".$file;
                 // $path2 = "Public/upimage/".$bigname;
 
                 $imginfo = getImageSize($path1);
@@ -43,7 +49,7 @@ class UploadpicController extends Controller {
                     'vote' => 0,
                     'sex' => $sex,
                     'time' => date('Y-m-d H:i:s',time()),
-                    'is_pass' => 0,
+                    'is_pass' => 2,
                 ];
                 M('image')->add($data);
                 $data = [
@@ -55,6 +61,7 @@ class UploadpicController extends Controller {
                     'has_upload' => 1,
                 ];
                 M('user')->add($data);
+                echo "<script> alert('成功'); window.location.href='".U('Uploadpic/index')."'</script>";
             }else{
                 echo"<script>
                 alert('格式不对');

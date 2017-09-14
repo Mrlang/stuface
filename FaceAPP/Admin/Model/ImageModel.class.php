@@ -4,7 +4,7 @@ use Think\Model;
 class ImageModel extends Model{
 	public function getNopass(){
 		$M = M('Image');
-		$nopassers = $M->where('is_pass=0')->select();
+		$nopassers = $M->where('is_pass=1')->select();
 		return $nopassers;
 	}
 

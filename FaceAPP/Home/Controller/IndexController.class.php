@@ -3,6 +3,10 @@ namespace Home\Controller;
 use Think\Controller;
 class IndexController extends Controller {
     public function index(){
+    	$a = M('User')->where(array('uid'=>2016214597))->find();
+        $b = M('User')->where(array('uid'=>2016212655))->find();
+        $this->assign('sex1',$a->sex);
+        $this->assign('sex2',$b->sex);
         $this->display();
     }
 
@@ -10,7 +14,7 @@ class IndexController extends Controller {
         if(I('get.fetchpage')!=null){
             $page = D('Image')->getpage();
             $this->ajaxReturn($page);
-        }     
+        }
     }
 
     public function get_pic(){
@@ -51,37 +55,50 @@ class IndexController extends Controller {
         $upload->exts = array('jpg', 'gif', 'png', 'jpeg'); // 设置附件上传类型
         $upload->rootPath = './Public/upimage/';            // 设置附件上传根目录
         $upload->autoSub = false;
-        $upload->savePath = ''; 
+        $upload->savePath = '';
         if(session('uid')){                      //学生上传单张照片
             $upload->saveName = time().'_'.session('uid');              // 设置上传文件名
-            
+
             $info = $upload->uploadOne($_FILES['photo']);       //执行上传方法
-            
+
             if(!$info) {                                       // 上传错误提示错误信息
                 $this->error($upload->getError());
             }else{                                              // 上传成功 获取上传文件信息
                 return './Public/upimage/'.$info['savename'];
                 }
         }else{                                                  //后台管理员批量上传照片
-            $info = $upload->upload($_FILES['photo']);      
+            $info = $upload->upload($_FILES['photo']);
                 if(!$info) {                                       // 上传错误提示错误信息
                 $this->error($upload->getError());
             }else{                                              // 上传成功 获取上传文件信息
                 return $info;
-            } 
+            }
         }
 
-        
+
     }
 
     public function uploadpic() {
-        if(  session('has_upload')==0 && session('uid')!=null && $_FILES['photo']!=null){
+        if(I('post.uid') != null && I('post.form') != null){
+            session('uid', I('post.uid'));
+            if(I('post.sex'))
+                session('user_sex',I('post.sex'));
+            $limit['uid'] = I('post.uid');
+            $limit['has_upload'] = 1;
+            $res = M('User')->where($limit)->find();
+            if($res){
+                session("has_upload",1);
+            }else{
+                session("has_upload",0);
+            }
+        }
+        if(session('has_upload')==0 && session('uid')!=null){
 
 
             $filename = dothumb($this->doupload());
-                
+
             D('Image')->addpic($filename);
-            
+
             $where['uid'] = I('session.uid');
             $save['phone'] = I('post.phone');
             $save['has_upload'] = 1;
@@ -104,10 +121,10 @@ class IndexController extends Controller {
         }else{
             $this->ajaxReturn("你已上传过照片！");
         }
-    */    
+    */
         //session('photo',$info);
         //var_dump($a);
-        
+
     }
 
 /*    public function vote(){
@@ -119,11 +136,11 @@ class IndexController extends Controller {
         }else{
             $res = false;
         }
-        
-            
+
+
         $this->ajaxReturn($res);
-        
-        
+
+
     }*/
 
     public function vote(){
@@ -169,8 +186,8 @@ class IndexController extends Controller {
         $where['vote_uid'] = 1;
         $res = M('Vote')->where($where)->find();
         var_dump($res);
-        
-        
+
+
     }
 
     public function add_lover(){
@@ -182,14 +199,14 @@ class IndexController extends Controller {
             $this->ajaxReturn('点赞失败');
         }
     }
-    
+
     public function user_select(){
         if(I('get.search')!=null){
             /*$result = D('user')->user_select();
             $this->ajaxReturn($result);*/
             D('Image')->get_pic();
         }
-        
+
     }
 
     public function log(){
@@ -208,20 +225,20 @@ class IndexController extends Controller {
         }else{
             $this->ajaxReturn(['status'=>111,'info'=>'密码错误']);
         }
-        
+
 
 
     }
-   
+
     public function log_out(){
         session('[destroy]');
         $this->ajaxReturn(true);
     }
 
 
-   
 
-    
+
+
     public function save_curl(){
         $uid = curl_uid();//通过微信API获取学号
         $pic = curl_pic();//从微信端扒照片保存到allimage，返回值为文件名 ./Public/allimage/**.--
@@ -247,7 +264,7 @@ class IndexController extends Controller {
         $filename = array_pop($arr);
         return $filename;
     }*/
-        
+
         public function aaa(){
             $data = log_result();
             $str = '2015255';

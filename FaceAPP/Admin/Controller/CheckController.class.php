@@ -20,10 +20,11 @@ class CheckController extends Controller {
         $stunum = I('stunum');
         if($stunum){
             $save = [
-                'is_pass' => 1, 
+                'is_pass' => 2, 
             ];
             $where = [
                 'uid' => $stunum,
+		'is_pass' => 1
             ];
             if(M('image')->where($where)->save($save)){
                 $this->ajaxReturn("ok");
@@ -37,7 +38,7 @@ class CheckController extends Controller {
             $where = [
                 'uid' => $stunum,
             ];
-            if(M('image')->where($where)->delete()){
+            if(M('image')->where($where)->save(array("is_pass" => 3))){
                 $this->ajaxReturn("ok");
             }
         }

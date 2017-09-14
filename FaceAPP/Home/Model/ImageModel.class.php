@@ -9,11 +9,11 @@ use Think\Model;
 			$data['big_pic'] = $big_name;
 			$data['uid'] = I('session.uid');
 			$data['time'] = date('Y-m-d H:i:s',time());
-			if(I('session.user_sex') != null)
+			if(I('session.user_sex') == '男' || I('session.user_sex') == '女' )
 				$data['sex'] = I('session.user_sex');
 			if(I('post.phone') != null){
 				$save['phone'] = I('post.phone');
-				$where['uid'] = $uid;
+				$where['uid'] = session('uid');
 				M('User')->where($where)->save($save);
 			}
 			$M->add($data);
@@ -66,9 +66,9 @@ use Think\Model;
 		    if(I('get.limit') == '综合')
 		       	session('order',null);
 			if(I('get.sex') == '妹子') 
-		        session('sex',1);
+		        session('sex','女');
 		    if(I('get.sex') == '汉子') 
-		        session('sex',0);
+		        session('sex','男');
 		    if(I('get.sex') == '全部') 
 		        session('sex',null);  
 		    
