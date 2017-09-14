@@ -6,7 +6,8 @@
 				foreach ($noPassers as $key) {
 			?>
 		    <li class="list-group-item"><a onclick="showpic(this)" href="#" title="<?php echo $key['uid'] ?>" name="<?php echo $key['pic'] ?>"><?php echo $key['uid'].": ".$key['time'] ?></a></li>
-		    <?php
+		    <a href="http://hongyan.cqupt.edu.cn/stuface2017/public/uploads/<?php echo $key['pic'] ?>" ?>查看大图</a>
+			<?php
 				}
 			?>
 		</ul>

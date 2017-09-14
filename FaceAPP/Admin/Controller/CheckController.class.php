@@ -24,6 +24,7 @@ class CheckController extends Controller {
             ];
             $where = [
                 'uid' => $stunum,
+		'is_pass' => 1
             ];
             if(M('image')->where($where)->save($save)){
                 $this->ajaxReturn("ok");
